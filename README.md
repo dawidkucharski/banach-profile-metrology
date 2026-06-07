@@ -62,7 +62,7 @@ All analytical figures can be regenerated from the CSV files without re-running 
 
 ## Data availability
 
-Raw interferometric PNG archives (FN~111: 24,000 frames; FN~101: 100,000 frames, ~4 GB total) are deposited on Zenodo. DOI will be added upon publication.
+Raw interferometric PNG archives (FN~111: 24,000 frames; FN~101: 100,000 frames, ~32 GB total) are available from the corresponding author upon reasonable request.
 
 ## Licence
 
