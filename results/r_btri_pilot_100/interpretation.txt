@@ -1,0 +1,10 @@
+Interpretation of classical and functional repeatability comparison
+
+Classical metrics outperform when the target measurand is a certified scalar quantity, when direct ISO repeatability reporting is required, or when the dominant variation is spatially homogeneous Gaussian noise. In that case Rq and the pixel-wise standard-deviation map are transparent and easy to audit.
+
+Functional metrics outperform when repeatability loss has geometry, for example edge motion in the step-height standard, localised defects, non-Gaussian excursions, or spatially structured form-removal residuals. The L2 distance to the mean surface treats each interferogram as one function-valued observation rather than as unrelated pixels.
+
+On smooth spherical surfaces, Rq and L2 repeatability are expected to be close because both respond to distributed residual energy. On discontinuous step-height surfaces, the functional metric is expected to diverge from scalar roughness metrics because edge-band displacement and plateau imbalance can preserve similar Rq values while changing the shape of the residual function.
+
+Spherical functional repeatability L2: 0.2413
+Step functional repeatability L2: 0.21344

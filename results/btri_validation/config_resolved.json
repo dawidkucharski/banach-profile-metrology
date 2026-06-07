@@ -1,0 +1,76 @@
+{
+  "project_root": "/Users/dawid/Library/Mobile Documents/com~apple~CloudDocs/Dokumenty/Publikacje w\u0142asne/Manuscripts/interfero-AI-based-Banach",
+  "output_dir": "results/btri_validation",
+  "make_plots": false,
+  "datasets": [
+    {
+      "name": "ceramic",
+      "path": "ceramic",
+      "kind": "ceramic_spherical_artefact",
+      "reference_model": "quadratic_cap",
+      "stride": 1,
+      "max_frames": 2,
+      "frame_selection": "stratified",
+      "start_index": null,
+      "stop_index": null,
+      "fit_max_pixels": 20000,
+      "preprocess": {
+        "normalisation": "none",
+        "crop": null,
+        "clip_quantiles": null,
+        "height_scale": null,
+        "height_offset": 0.0
+      },
+      "step_axis": "x",
+      "step_edge_band_px": 8,
+      "step_plateau_model": "plane",
+      "nominal_values": {
+        "diameter_mm": 29.9588
+      }
+    },
+    {
+      "name": "steel",
+      "path": "steel",
+      "kind": "steel_step_height_artefact",
+      "reference_model": "step_plane",
+      "stride": 1,
+      "max_frames": 2,
+      "frame_selection": "stratified",
+      "start_index": null,
+      "stop_index": null,
+      "fit_max_pixels": 20000,
+      "preprocess": {
+        "normalisation": "none",
+        "crop": null,
+        "clip_quantiles": null,
+        "height_scale": null,
+        "height_offset": 0.0
+      },
+      "step_axis": "x",
+      "step_edge_band_px": 8,
+      "step_plateau_model": "plane",
+      "nominal_values": {}
+    }
+  ],
+  "descriptors": {
+    "gradient_spacing": [
+      1.0,
+      1.0
+    ],
+    "scale_sigmas_px": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ]
+  },
+  "uncertainty": {
+    "coverage_factor": 2.0,
+    "block_size": 100,
+    "type_b_absolute": 0.0,
+    "type_b_relative": 0.0,
+    "quantization_step": 0.0,
+    "type_b_absolute_by_metric": {},
+    "type_b_relative_by_metric": {}
+  }
+}

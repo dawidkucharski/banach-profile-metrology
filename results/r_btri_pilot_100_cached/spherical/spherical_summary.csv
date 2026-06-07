@@ -1,0 +1,2 @@
+"artefact","n","mean_Ra","sd_Ra","mean_Rq","sd_Rq","iso_repeatability_limit_Rq","pixelwise_sd_rms","functional_repeatability_L2","functional_repeatability_L2_rms"
+"spherical",100,0.235589588180819,0.0011779376379487,0.276600451556471,0.00109806573624905,0.00307458406149733,0.242807272897001,0.241314093635532,0.241590186170634

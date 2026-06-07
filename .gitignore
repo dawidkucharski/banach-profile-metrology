@@ -1,0 +1,21 @@
+# Intellectual property — DO NOT COMMIT
+manuscript/
+template.*
+*.aux
+*.fdb_latexmk
+*.fls
+
+# Raw interferogram archives — deposit on Zenodo separately
+ceramic/
+steel/
+Kula_ver2/
+
+# Certificates and photos
+cert/
+*.jpg
+
+# Virtual environment
+.venv/
+
+# macOS
+.DS_Store

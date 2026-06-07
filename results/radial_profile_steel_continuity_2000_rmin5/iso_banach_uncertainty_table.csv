@@ -1,0 +1,10 @@
+sample,family,descriptor,value,unit,sweep_mean,standard_uncertainty,expanded_uncertainty_95,relative_standard_uncertainty,repeat_count
+steel,ISO/profile,Ra,1869.3454137573285,nm,1869.3454137573285,0.0,0.0,0.0,1.0
+steel,ISO/profile,Rz,7454.086447670145,nm,7454.086447670145,0.0,0.0,0.0,1.0
+steel,ISO/step,step depth,5073.9318242624795,nm,5073.9318242624795,0.0,0.0,0.0,1.0
+steel,Banach,L1 mean,1869.3454137573285,nm,1869.3454137573285,0.0,0.0,0.0,1.0
+steel,Banach,L2 RMS,2065.4997541972134,nm,2065.4997541972134,0.0,0.0,0.0,1.0
+steel,Banach,L infinity,4499.854472544175,nm,4499.854472544175,0.0,0.0,0.0,1.0
+steel,Banach,BV total variation,18466.924968642623,nm,18466.924968642623,0.0,0.0,0.0,1.0
+steel,Banach,BV density,9.238081525083853,nm/sample,9.238081525083853,0.0,0.0,0.0,1.0
+steel,Banach,W12 gradient,22.42396715578904,nm/sample,22.42396715578904,0.0,0.0,0.0,1.0

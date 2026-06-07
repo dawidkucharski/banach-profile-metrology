@@ -1,0 +1,17 @@
+{
+  "ceramic_eccentricity": {
+    "sample_count": 600.0,
+    "frames_per_sweep": 4800.0,
+    "sweep_count": 5.0,
+    "eccentricity_amplitude_native": 0.23458341492089832,
+    "roundness_deviation_RONt_native": 2.745175052470799,
+    "roundness_deviation_RONq_native": 0.3885482223556201
+  },
+  "steel_step": {
+    "edge_index_px": 600.0,
+    "edge_band_px": 8.0,
+    "left_level_native": -1.536927717597095,
+    "right_level_native": -22.475505177884386,
+    "step_height_native": -20.93857746028729
+  }
+}
