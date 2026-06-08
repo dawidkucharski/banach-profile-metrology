@@ -15,13 +15,39 @@
 
 \begin{document}
 
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
 \begin{frontmatter}
-\title{Supplementary Materials: Banach-Space Norm Descriptors for Interferometric Profile Metrology}
+\title{Supplementary Materials: Gradient-Sensitive Functional Descriptors for Interferometric Roundness Metrology}
 \end{frontmatter}
 
-\section{Supplementary Experimental Details}
+\section{Artefact Documentation}
+
+\subsection{Artefact photographs}
+
+
+\begin{figure}[H]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figs/ceramic_standard.jpg}
+\caption{JENOPTIK roundness standard FN~111 ($Al_{2}O_{3}$, $\phi = 29.9588~\mathrm{mm}$). Test report Art.~521~799. DAkkS-DKD calibration certificate Art.~532~529.}
+\label{fig:supp_ceramic_standard}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figs/steel_standard.jpg}
+\caption{JENOPTIK magnification standard FN~101. Test report Art.~521~809. DAkkS-DKD calibration certificate Art.~532~528.}
+\label{fig:supp_steel_standard}
+\end{minipage}
+\end{figure}
+
+\section{Experimental Setup}
+
 
 \subsection{Rotation stage specifications}
+
 
 \begin{table}[H]
 \centering
@@ -45,6 +71,7 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 
 \subsection{Environmental shielding and vibration isolation}
 
+
 \begin{figure}[H]
 \centering
 \begin{minipage}[t]{0.45\textwidth}
@@ -62,7 +89,11 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \end{minipage}
 \end{figure}
 
+\section{Image Processing --- Phase Extraction}
+
+
 \subsection{Single-image radial phase extraction}
+
 
 \begin{figure}[H]
 \centering
@@ -78,6 +109,9 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \label{fig:supp_steel_radial_phase}
 \end{figure}
 
+\subsection{Sequence processing steps}
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic/phase_processing_steps.pdf}
@@ -92,10 +126,11 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \label{fig:supp_steel_phase_steps}
 \end{figure}
 
-\section{Supplementary Validation Analyses}
+\section{Results --- Descriptor Comparisons}
 
-\FloatBarrier
+
 \subsection{Descriptor comparison and uncertainty}
+
 
 \begin{figure}[H]
 \centering
@@ -111,8 +146,53 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \label{fig:supp_uncertainty}
 \end{figure}
 
-\FloatBarrier
+\subsection{Profile reconstruction}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic/profile_reconstruction.pdf}
+\caption{Ceramic profile reconstruction. (Top left) Raw height profiles from all five sweeps, vertically offset for clarity. (Top right) LSCI-centred residual for sweep~0. (Bottom left) Gaussian low-pass filtered residual (50\% at 15~UPR) with $RONt=278$~nm. (Bottom right) Full-sequence ISO and gradient-based descriptors.}
+\label{fig:supp_ceramic_profile_reconstruction}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/steel/profile_reconstruction.pdf}
+\caption{Steel profile reconstruction. (Top left) Detrended height profiles from all five sweeps, vertically offset. (Top right) LSCI-centred residual for sweep~0. (Bottom left) Gaussian low-pass filtered residual (50\% at 15~UPR) with $RONt=42.07~\mu$m. (Bottom right) Full-sequence ISO and gradient-based descriptors.}
+\label{fig:supp_steel_profile_reconstruction}
+\end{figure}
+
+\subsection{Steel roundness --- polar representation}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/steel/roundness_polar.pdf}
+\caption{Steel roundness in polar coordinates (LSCI + Gaussian low-pass, 50\% at 15~UPR). Five sweeps at native angular positions. The Flick flat appears at a shifted angular position in each sweep due to the $40^\circ$ offset between successive $360^\circ$ segments. $RONt = 42.07 \pm 0.48~\mu$m.}
+\label{fig:supp_steel_roundness_polar}
+\end{figure}
+
+\subsection{Per-sweep descriptor values}
+
+
+\input{per_sweep_table.tex}
+
+\section{Validation Analyses}
+
+
+\subsection{Cross-instrument validation: optical versus tactile}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic_tactile_comparison_polar.pdf}
+\caption{Polar comparison of optical (this work) and tactile reference (Hommel Roundscan~535) roundness profiles for the FN~111 standard. Both profiles are LSCI-centred and Gaussian low-pass filtered (50\% at 15~UPR). The optical profile agrees with the tactile reference to within the combined uncertainty ($E_n = 0.61$).}
+\label{fig:supp_tactile_comparison}
+\end{figure}
+
 \subsection{Descriptor independence validation}
+
 
 \begin{figure}[H]
 \centering
@@ -135,8 +215,8 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \label{fig:supp_cohens_d}
 \end{figure}
 
-\FloatBarrier
 \subsection{Critical descriptor assessment}
+
 
 \begin{figure}[H]
 \centering
@@ -152,15 +232,16 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \label{fig:supp_lp_convergence}
 \end{figure}
 
-\FloatBarrier
-\section{Supplementary Sensitivity and Artefact-Specific Analyses}
+\section{Sensitivity Analysis and Flick Flat Detection}
+
 
 \subsection{Descriptor sensitivity to synthetic defects}
+
 
 \begin{table}[H]
 \centering
 \small
-\caption{Sensitivity of ISO and gradient-based descriptors to synthetic profile defects. Values are percentage change from the unperturbed ceramic baseline (LSCI + Gaussian low-pass, 50\% at 15~UPR; $R_a=61.9$~nm, $R_q=71.0$~nm). Bold entries indicate changes exceeding 10\%. Defect details: Spike = single $100$~nm point; Scratch = $5\times50$~nm depression; Waviness = $20$~nm sinusoid ($\lambda=500$ samples); Step = $30$~nm offset; Noise = $5$~nm RMS white noise.}
+\caption{Sensitivity of ISO and gradient-based descriptors to synthetic profile defects. Values are percentage change from the unperturbed ceramic baseline (LSCI + Gaussian low-pass, 50\% at 15~UPR; $R_a=61.9$~nm, $R_q=71.0$~nm). Bold entries indicate changes exceeding 10\%. Defect details: Spike = single $100$~nm point; Scratch = $5\times50$~nm depression; Waviness = $20$~nm sinusoid ($\lambda=500$ samples); Step = $30$~nm offset; Noise = $5$~nm RMS white noise. The baseline values ($R_a=61.9$~nm, $R_q=71.0$~nm) correspond to the unperturbed sweep-0 ceramic profile used for defect injection; they differ slightly from the five-sweep means in Table~2 of the main manuscript because the latter average all sweeps with the $40^\circ$ angular offset between successive $360^\circ$ segments.}
 \label{tab:supp_descriptor_sensitivity}
 \begin{tabular}{lccccc}
 \toprule
@@ -177,7 +258,7 @@ $R_{ku}$ (kurtosis) & $+$0.0\% & $+$0.1\% & $+$2.4\% & $+$7.3\% & $+$0.4\% \\
 $L^4/L^1$ peakiness & $+$0.0\% & $+$0.0\% & $+$0.7\% & $+$3.5\% & $+$0.2\% \\
 $BV$ density & \textbf{$+$17.7\%} & $+$8.9\% & \textbf{$+$11.7\%} & $+$2.7\% & \textbf{$+$2077.4\%} \\
 $W^{1,2}$ grad.\ seminorm & \textbf{$+$621.8\%} & \textbf{$+$271.2\%} & \textbf{$+$16.9\%} & \textbf{$+$81.7\%} & \textbf{$+$2260.9\%} \\
-Curvature RMS & \textbf{$+$273\,161\%} & \textbf{$+$111\,458\%} & \textbf{$+$94\%} & \textbf{$+$47\,230\%} & \textbf{$+$901\,073\%} \\
+Curvature RMS\textsuperscript{*} & --- & --- & \textbf{$+$94\%} & --- & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -188,8 +269,12 @@ The results lead to five conclusions:
   \item ISO shape parameters respond to asymmetry but not to symmetric localised features. $R_{sk}$ changes by $-1104\%$ for a step defect (strong asymmetry), but only $-0.4\%$ for a symmetric spike. $R_{ku}$ is insensitive to all tested defects.
   \item Gradient-structure descriptors provide substantially higher sensitivity to localised defects than any single ISO~4287 parameter. BV density increases by $+18\%$ for a spike, $+9\%$ for a scratch, and $+12\%$ for waviness. The $W^{1,2}$ gradient seminorm shows even larger relative changes ($+622\%$ for spike, $+271\%$ for scratch).
   \item $R_{sk}$ and BV density are complementary: $R_{sk}$ detects asymmetry, BV density detects localised gradients regardless of symmetry. Their combination provides descriptive sensitivity beyond any single classical parameter.
-  \item Curvature RMS is extremely sensitive to localised defects but strongly sampling-dependent; it should be used only for same-instrument comparisons.
+  \item Curvature RMS is strongly sampling-dependent, carrying a $(\Delta\alpha)^{-2}$ factor that amplifies single-point second differences for spike- and scratch-type defects; its percentage-change values for such defects are not practically interpretable and are omitted from the table (see footnote). Curvature RMS should be used only for same-instrument, same-sampling comparisons of smoothly varying profiles.
 \end{enumerate}
+
+
+\textsuperscript{*}\,Curvature RMS carries a $(\Delta\alpha)^{-2}$ sampling dependence that amplifies single-point second differences for spike- and scratch-type defects by factors exceeding $10^3$; its percentage-change values for such defects are not practically interpretable and are omitted. The $+94\%$ change for the waviness defect reflects the sinusoidal curvature contribution and is meaningful for same-instrument comparisons of smoothly varying profiles.
+
 
 \begin{figure}[H]
 \centering
@@ -198,8 +283,8 @@ The results lead to five conclusions:
 \label{fig:supp_descriptor_sensitivity}
 \end{figure}
 
-\FloatBarrier
-\subsection{Flick flat detection and measurement (FN~101)}
+\subsection{Flick flat detection and measurement}
+
 
 \begin{figure}[H]
 \centering
@@ -215,60 +300,16 @@ The results lead to five conclusions:
 \label{fig:supp_flick_flat_measurement}
 \end{figure}
 
-\FloatBarrier
-\subsection{Cross-instrument validation: optical versus tactile}
+\section{Harmonic Decomposition}
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic_tactile_comparison_polar.pdf}
-\caption{Polar comparison of optical (this work) and tactile reference (Hommel Roundscan~535) roundness profiles for the FN~111 standard. Both profiles are LSCI-centred and Gaussian low-pass filtered (50\% at 15~UPR). The optical profile agrees with the tactile reference to within the combined uncertainty ($E_n = 0.61$).}
-\label{fig:supp_tactile_comparison}
+\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/harmonic_decomposition.pdf}
+\caption{Harmonic decomposition of the LSCI residual profile (sweep~0, pre-Gaussian-filter). Dominant harmonics are annotated; the 15~UPR Gaussian filter cutoff (dashed line) attenuates harmonics above this order. The ceramic residual is dominated by the 2nd harmonic ($H_2$), consistent with the single-lobe form explaining the $RONt=R_z$ identity after filtering. The steel residual shows a broader harmonic distribution reflecting the Flick flat's step-like geometry.}
+\label{fig:supp_harmonic_decomposition}
 \end{figure}
 
-\FloatBarrier
-\section{Supplementary Artefact Documentation}
-
-\subsection{Artefact photographs}
-
-\begin{figure}[H]
-\centering
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\includegraphics[width=\linewidth]{figs/ceramic_standard.jpg}
-\caption{JENOPTIK roundness standard FN~111 ($Al_{2}O_{3}$, $\phi = 29.9588~\mathrm{mm}$). Test report Art.~521~799. DAkkS-DKD calibration certificate Art.~532~529.}
-\label{fig:supp_ceramic_standard}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\includegraphics[width=\linewidth]{figs/steel_standard.jpg}
-\caption{JENOPTIK magnification standard FN~101. Test report Art.~521~809. DAkkS-DKD calibration certificate Art.~532~528.}
-\label{fig:supp_steel_standard}
-\end{minipage}
-\end{figure}
-
-\subsection{Steel roundness — polar representation (FN~101, Flick flat)}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/steel/roundness_polar.pdf}
-\caption{Steel roundness in polar coordinates (LSCI + Gaussian low-pass, 50\% at 15~UPR). Five sweeps at native angular positions. The Flick flat appears at a shifted angular position in each sweep due to the $40^\circ$ offset between successive $360^\circ$ segments. $RONt = 42.07 \pm 0.48~\mu$m.}
-\label{fig:supp_steel_roundness_polar}
-\end{figure}
-
-\subsection{Profile reconstruction plots}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic/profile_reconstruction.pdf}
-\caption{Ceramic profile reconstruction. (Top left) Raw height profiles from all five sweeps, vertically offset for clarity. (Top right) LSCI-centred residual for sweep~0. (Bottom left) Gaussian low-pass filtered residual (50\% at 15~UPR) with $RONt=278$~nm. (Bottom right) Full-sequence ISO and gradient-based descriptors.}
-\label{fig:supp_ceramic_profile_reconstruction}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/steel/profile_reconstruction.pdf}
-\caption{Steel profile reconstruction. (Top left) Detrended height profiles from all five sweeps, vertically offset. (Top right) LSCI-centred residual for sweep~0. (Bottom left) Gaussian low-pass filtered residual (50\% at 15~UPR) with $RONt=42.07~\mu$m. (Bottom right) Full-sequence ISO and gradient-based descriptors.}
-\label{fig:supp_steel_profile_reconstruction}
-\end{figure}
+\bibliography{bib,scopus-banach,scopus-interfero}
 
 \end{document}
