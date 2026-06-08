@@ -19,7 +19,7 @@
 \renewcommand{\thetable}{S\arabic{table}}
 
 \begin{frontmatter}
-\title{Supplementary Materials: Gradient-Sensitive Functional Descriptors for Interferometric Roundness Metrology}
+\title{Supplementary Materials: Gradient-Sensitive Functional Descriptors for Interferometric Surface Metrology}
 \end{frontmatter}
 
 \section{Artefact Documentation}
@@ -32,15 +32,13 @@
 \begin{minipage}[t]{0.48\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figs/ceramic_standard.jpg}
-\caption{JENOPTIK roundness standard FN~111 ($Al_{2}O_{3}$, $\phi = 29.9588~\mathrm{mm}$). Test report Art.~521~799. DAkkS-DKD calibration certificate Art.~532~529.}
-\label{fig:supp_ceramic_standard}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figs/steel_standard.jpg}
-\caption{JENOPTIK magnification standard FN~101. Test report Art.~521~809. DAkkS-DKD calibration certificate Art.~532~528.}
-\label{fig:supp_steel_standard}
 \end{minipage}
+\caption{(a)~JENOPTIK roundness standard FN~111 ($Al_{2}O_{3}$, $\phi = 29.9588~\mathrm{mm}$), test report Art.~521~799, DAkkS-DKD calibration certificate Art.~532~529. (b)~JENOPTIK magnification standard FN~101, test report Art.~521~809, DAkkS-DKD calibration certificate Art.~532~528.}
+\label{fig:supp_artefact_photos}
 \end{figure}
 
 \section{Experimental Setup}
@@ -77,16 +75,14 @@ Origin repeatability & $\pm 0.25$ mdeg \\
 \begin{minipage}[t]{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/blanket.jpg}
-\caption{Setup shielded by a plexiglass box and covered by a wool blanket.}
-\label{fig:supp_blanket}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/styrofoam_support.jpg}
-\caption{Layered wooden-polystyrene support with granite plate.}
-\label{fig:supp_styrofoam}
 \end{minipage}
+\caption{(a)~Setup shielded by a plexiglass box and covered by a wool blanket. (b)~Layered wooden-polystyrene support with granite plate.}
+\label{fig:supp_environmental_shielding}
 \end{figure}
 
 \section{Image Processing --- Phase Extraction}
@@ -276,22 +272,8 @@ The results lead to five conclusions:
 \textsuperscript{*}\,Curvature RMS carries a $(\Delta\alpha)^{-2}$ sampling dependence that amplifies single-point second differences for spike- and scratch-type defects by factors exceeding $10^3$; its percentage-change values for such defects are not practically interpretable and are omitted. The $+94\%$ change for the waviness defect reflects the sinusoidal curvature contribution and is meaningful for same-instrument comparisons of smoothly varying profiles.
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\textwidth]{../../results/radial_profile_reconstruction_metric/descriptor_sensitivity.pdf}
-\caption{Sensitivity of ISO and gradient-based descriptors to five synthetic defect types injected into the FN~111 residual profile. Values are percentage change from the unperturbed baseline. Bold labels indicate changes exceeding 10\%.}
-\label{fig:supp_descriptor_sensitivity}
-\end{figure}
-
 \subsection{Flick flat detection and measurement}
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/flick_flat_detection.pdf}
-\caption{Flick flat detection on the JENOPTIK magnification standard FN~101. BV density (bottom panel) shows a clear spike at the Flick flat angular position, whereas the ISO~4287 amplitude parameter $R_a$ (computed in a sliding window, top panel) shows negligible response. This demonstrates the complementary gradient-sensitive information provided by BV density beyond amplitude averaging.}
-\label{fig:supp_flick_flat_detection}
-\end{figure}
 
 \begin{figure}[H]
 \centering

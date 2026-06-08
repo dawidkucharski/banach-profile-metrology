@@ -6,6 +6,7 @@
 \usepackage{lineno}
 \usepackage{hyperref}
 \usepackage{wasysym}
+\usepackage{placeins}
 
 \modulolinenumbers[1]
 \journal{Measurement}
@@ -16,7 +17,7 @@
 
 \begin{frontmatter}
 
-\title{Gradient-Sensitive Functional Descriptors for Interferometric Roundness Metrology: Complementing Amplitude-Averaging ISO Parameters}
+\title{Gradient-Sensitive Functional Descriptors for Interferometric Surface Metrology: Complementing Amplitude-Averaging ISO Parameters}
 
 %% DOUBLE-BLIND: Author details on title page only
 % \author{Dawid Kucharski}
@@ -24,11 +25,11 @@
 % \fntext[corresponding]{Corresponding author: \href{mailto:dawid.kucharski@put.poznan.pl}{dawid.kucharski@put.poznan.pl}}
 
 \begin{abstract}
-Amplitude-averaging surface parameters such as $R_a$ may show limited response to localised defects — a controlled sensitivity experiment indicates that a single 100~nm synthetic spike injected into a spherical-artefact profile produces no detectable change in $R_a$ at the reconstruction resolution, and the ISO~4287 shape parameters $R_{sk}$ and $R_{ku}$ show similarly limited response to such symmetric localised features. This paper evaluates the same reconstructed profile data within a functional-analytic norm framework — $L^p$, Sobolev $W^{1,2}$, and bounded-variation (BV) norms, standard tools of functional analysis here applied within a metrological processing pipeline — finding higher sensitivity to such defects (BV density: $+18\%$; $W^{1,2}$ gradient seminorm: $+622\%$) without additional hardware. A complete proof-of-concept pipeline from raw Michelson-interferometer fringe images to nanometre profile descriptors is presented and validated on two JENOPTIK standards (roundness standard FN~111, $\varnothing=29.9588$~mm, 24,000 frames; magnification standard FN~101 with Flick flat, 100,000 frames), each measured in five $400^\circ$ sweeps. External validation against 104 tactile reference measurements (Hommel Roundscan~535) yields $E_n=0.61$ for the FN~111 and $0.3\%$ agreement for the FN~101 (optical--tactile polar comparison: Supplementary Fig.~S12), suggesting metrological consistency of the optical pipeline within the stated within-run type-A uncertainties. The functional-norm quantities are presented as complementary to the ISO~4287 baseline: $R_{sk}$ responds to asymmetry, BV density responds to localised gradients, and their combination may provide descriptive sensitivity beyond that of any single classical parameter in the tested scenarios. The central finding is that BV density detects a certified geometric feature (the Flick flat on the FN~101 standard) that remains below the detection threshold of amplitude-averaging parameters in a sliding-window analysis matched to the feature's certified angular extent, illustrating --- in the tested proof-of-concept scenarios --- that gradient-based quantities can provide complementary descriptive sensitivity to localised geometric features without additional hardware; the $L^4/L^1$ peakiness ratio ($1.39 \pm 0.08$ for the FN~111, $1.53 \pm 0.03$ for the FN~101; difference not statistically distinguishable at 95\% confidence given overlapping expanded uncertainties) is reported as an illustrative distribution-shape indicator reflecting the amplification of dominant profile excursions relative to $R_a$.
+Amplitude-averaging surface parameters such as $R_a$ may show limited response to localised defects — a controlled sensitivity experiment indicates that a single 100~nm synthetic spike injected into a spherical-artefact profile produces no detectable change in $R_a$ at the reconstruction resolution, and the ISO~4287 shape parameters $R_{sk}$ and $R_{ku}$ show similarly limited response to such symmetric localised features. This paper evaluates the same reconstructed profile data within a functional-analytic norm framework — $L^p$, Sobolev $W^{1,2}$, and bounded-variation (BV) norms, standard tools of functional analysis here applied within a metrological processing pipeline — finding higher sensitivity to such defects (BV density: $+18\%$; $W^{1,2}$ gradient seminorm: $+622\%$) without additional hardware. A complete proof-of-concept pipeline from raw Michelson-interferometer fringe images to nanometre profile descriptors is presented and validated on two JENOPTIK standards (roundness standard FN~111, $\varnothing=29.9588$~mm, 24,000 frames; magnification standard FN~101 with Flick flat, 100,000 frames), each measured in five $400^\circ$ sweeps. External validation against 104 tactile reference measurements (Hommel Roundscan~535) yields $E_n=0.61$ for the FN~111 (optical--tactile polar comparison: Supplementary Fig.~S12) and $0.3\%$ agreement for the FN~101, suggesting metrological consistency of the optical pipeline within the stated within-run type-A uncertainties. The functional-norm quantities are presented as complementary to the ISO~4287 baseline: $R_{sk}$ responds to asymmetry, BV density responds to localised gradients, and their combination may provide descriptive sensitivity beyond that of any single classical parameter in the tested scenarios. The central finding is that BV density detects a certified geometric feature (the Flick flat on the FN~101 standard) that remains below the detection threshold of amplitude-averaging parameters in a sliding-window analysis matched to the feature's certified angular extent, illustrating --- in the tested proof-of-concept scenarios --- that gradient-based quantities can provide complementary descriptive sensitivity to localised geometric features without additional hardware; the $L^4/L^1$ peakiness ratio ($1.39 \pm 0.08$ for the FN~111, $1.53 \pm 0.03$ for the FN~101; difference not statistically distinguishable at 95\% confidence given overlapping expanded uncertainties) is reported as an illustrative distribution-shape indicator reflecting the amplification of dominant profile excursions relative to $R_a$.
 \end{abstract}
 
 \begin{keyword}
-interferometry \sep roundness \sep surface profile \sep Banach-space norms \sep bounded variation \sep Sobolev seminorm \sep uncertainty
+interferometry \sep roundness \sep surface profile \sep functional norms \sep bounded variation \sep Sobolev seminorm \sep uncertainty
 \end{keyword}
 
 \end{frontmatter}
@@ -40,7 +41,9 @@ Surface topography is one of the most important properties of technical parts. T
 
 Optical dimensional metrology has a long connection with interference~\cite{MICHELSON1893}. Modern optical surface metrology relies on diffraction, polarisation and interference~\cite{Jenkins1976,Born2000}. Diffraction and scattering have been applied to roughness measurement~\cite{Brodmann1983,Brodmann1986,Fan1994,Hertzsch2002,Kucharski_D._A_2020}, while interference remains central for ultra-precise surface-form measurement~\cite{Benoit1898,Xue-fei2015} and phase-shifting interferometry is widely used in topography evaluation~\cite{DeGroot2011a,Chatterjee:2015phase,deGroot2014}.
 
-Several interferometric instruments have been proposed for high-accuracy surface and roundness measurement. Polack et al. described a Michelson-based system for surface-shape determination built around a high-resolution stitching interferometer developed by Thomasset et al.~\cite{Polack2019,Thomasset2013}. Fan et al. presented a roundness measuring system for microspheres based on two small Michelson interferometers~\cite{Fan2014}. Kuhnel et al. proposed an interferometric system for roundness and cylindricity measurement of ring gauges with 0.1 nm resolution over a large measurement range~\cite{Kuhnel2012}. Commercial instruments can be highly accurate, but they are often costly and may not expose the full acquisition chain needed for experimental method development. The present work therefore uses a self-built, non-contact Michelson-type roundness measurement system assembled from off-the-shelf components. The optical setup, apparatus description and radial image-processing route for phase extraction were published in a previous study~\cite{kucharski2025radial-0ca}, where only roughness parameters were reported for the ceramic standard FN~111. The present work extends that study in three directions: (i)~roundness ($RONt$, $RONq$) is evaluated for the first time with this self-built optical setup, (ii)~a second artefact — the JENOPTIK magnification standard FN~101 with a Flick flat — is measured and validated against its DAkkS-DKD certificate, and (iii)~a controlled sensitivity-comparison methodology is introduced: synthetic defects of known geometry are injected into measured profiles, and the response of classical ISO parameters is compared against that of $L^p$, Sobolev $W^{1,2}$, and bounded-variation (BV) norms — standard tools of functional analysis here applied to interferometric profile metrology — all computed from the same nanometre residual. The comparison framework, rather than any individual norm, constitutes the methodological contribution.
+Several interferometric instruments have been proposed for high-accuracy surface and roundness measurement. Polack et al. described a Michelson-based system for surface-shape determination built around a high-resolution stitching interferometer developed by Thomasset et al.~\cite{Polack2019,Thomasset2013}. Fan et al. presented a roundness measuring system for microspheres based on two small Michelson interferometers~\cite{Fan2014}. Kuhnel et al. proposed an interferometric system for roundness and cylindricity measurement of ring gauges with 0.1 nm resolution over a large measurement range~\cite{Kuhnel2012}. Commercial instruments can be highly accurate, but they are often costly and may not expose the full acquisition chain needed for experimental method development. 
+
+The present work uses a self-built, non-contact Michelson-type roundness measurement system assembled from off-the-shelf components. The optical setup, apparatus description and radial image-processing route for phase extraction were published in a previous study~\cite{kucharski2025radial-0ca}, where only roughness parameters were reported for the ceramic standard FN~111. The present work extends that study in three directions: (i)~roundness ($RONt$, $RONq$) is evaluated for the first time with this self-built optical setup, (ii)~a second artefact — the JENOPTIK magnification standard FN~101 with a Flick flat — is measured and validated against its DAkkS-DKD certificate, and (iii)~a controlled sensitivity-comparison methodology is introduced: synthetic defects of known geometry are injected into measured profiles, and the response of classical ISO parameters is compared against that of $L^p$, Sobolev $W^{1,2}$, and bounded-variation (BV) norms — standard tools of functional analysis here applied to interferometric profile metrology — all computed from the same nanometre residual. The comparison framework, rather than any individual norm, constitutes the methodological contribution.
 
 The computational problem is that modern interferometric surface metrology records long image sequences before a numerical profile exists. In the present data, however, each PNG file is already a separate interferogram in which the phase is encoded spatially by the bright and dark fringes inside the image. The files in the FN~111 and FN~101 folders are therefore not treated as a temporal phase-shifting stack of one fixed scene. Instead, each image $I_i(x,y)$ is processed independently to obtain one wrapped excess-fraction value $\epsilon_i$. The ordered sequence of these values is then unwrapped over image order and converted to a nanometre profile. The full measurement archive contains 24,000 grayscale interferograms of the FN~111, with image size 648 $\times$ 488 px, and 100,000 grayscale interferograms of the JENOPTIK magnification standard FN~101, with image size 640 $\times$ 480 px.
 
@@ -55,7 +58,8 @@ The optical layout of the measurement system is shown in Fig.~\ref{fig:layout}. 
 
 The optical setup and the full apparatus-level description were reported in a previous study on radial image processing for phase extraction in rough-surface interferometry~\cite{kucharski2025radial-0ca}. They are repeated here in condensed form to make the present functional-descriptor analysis self-contained and to document the acquisition conditions behind the FN~111 and FN~101 interferogram archives.
 
-\begin{figure}[tb]
+\FloatBarrier
+\begin{figure}[ht]
 \centering
 \begin{minipage}[t]{0.48\linewidth}
 \centering
@@ -82,7 +86,7 @@ Measurements were performed at night (23:00--05:00) to minimise building-activit
 \subsection{Control System and Acquisition Workflow}
 Cameras were controlled by FLIR SDK-based C programs and Bash scripts~\cite{FLIR_sdk}. Capture time was recorded per frame for angular-position verification. The rotation stage was controlled via USB ASCII commands~\cite{newport_esp_manual}; a 25~s settling delay ensured constant velocity before acquisition began. Object centring was performed manually using the two-camera phase-shifted configuration at $45^\circ$ rotation increments. Fringe evaluation used modified open-source R code~\cite{Meijer2018a,Ihaka1996}. Table~\ref{tab:meas_param} lists the acquisition parameters for both archives; five $400^\circ$ sweeps were recorded per artefact, with the $40^\circ$ overlap retained for profile-end comparison.
 
-\begin{table}[htbp]
+\begin{table}[ht]
 \centering
 \caption{Measurement and sampling parameters of the interferometric acquisition workflow.}
 \label{tab:meas_param}
@@ -180,7 +184,7 @@ Both $W^{1,2}$ and BV density carry sampling-interval dependence and require con
 The curvature RMS (root-mean-square of the discrete second derivative; reported in Supplementary Table~S2) carries a $(\Delta\alpha)^{-2}$ sampling dependence and should not be compared across instruments with different angular resolution.
 
 \subsection{Repeatability Uncertainty}
-Each dataset contains five $400^\circ$ sweeps recorded in a single continuous rotation without stopping or repositioning. The five useful $360^\circ$ segments are extracted from this continuous sequence; because each recorded sweep spans $400^\circ$, successive useful revolutions are shifted by $40^\circ$ on the object. These segments are \emph{not} strictly independent — they share the same continuous-run conditions (laser warm-up state, stage-bearing temperature, ambient drift). The standard deviation across sweeps therefore reflects within-run repeatability rather than between-run reproducibility. For a descriptor $X$ evaluated on each sweep, the mean value is $\bar{X}$ and the within-run standard uncertainty is estimated as
+Each dataset contains five $400^\circ$ sweeps recorded in a single continuous rotation without stopping or repositioning. The five useful $360^\circ$ segments are extracted from this continuous sequence; because each recorded sweep spans $400^\circ$, successive useful revolutions are shifted by $40^\circ$ on the object. These segments are not strictly independent — they share the same continuous-run conditions (laser warm-up state, stage-bearing temperature, ambient drift). The standard deviation across sweeps therefore reflects within-run repeatability rather than between-run reproducibility. For a descriptor $X$ evaluated on each sweep, the mean value is $\bar{X}$ and the within-run standard uncertainty is estimated as
 \begin{equation}
 u_{\mathrm{within}}(X)=\frac{s_X}{\sqrt{n}}, \qquad n=5,
 \end{equation}
@@ -245,7 +249,8 @@ The numerical identity $RONt=R_z$ for both artefacts (Table~\ref{tab:metric_phas
 \subsection{Classical--Functional-Descriptor Comparison}
 The numerical identity $R_a=L^1$ and $R_q=L^2$ (Table~\ref{tab:metric_phase_reconstruction}) confirms that both descriptor families are evaluated on the same nanometre residual. For the FN~111, BV total variation carries $1.2\%$ relative expanded uncertainty versus $5.5\%$ for $R_a$ and $8.5\%$ for $R_z$, suggesting that gradient-based descriptors may exhibit metrological stability comparable to or better than peak-referenced roughness parameters in the tested datasets. Comparative bar charts and uncertainty analyses are provided in the Supplementary Materials (Figs.~S7--S8). Ceramic and steel profile reconstruction plots are shown in Supplementary Figs.~S9--S10.
 
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/ceramic/roundness_polar.pdf}
 \caption{Ceramic roundness in polar coordinates (LSCI + Gaussian low-pass, 50\% at 15~UPR). Five sweeps at native positions. $RONt = 278 \pm 22$~nm.}
@@ -254,7 +259,8 @@ The numerical identity $R_a=L^1$ and $R_q=L^2$ (Table~\ref{tab:metric_phase_reco
 
 The steel roundness polar representation (FN~101, Flick flat) is provided in the Supplementary Materials (Fig.~S11).
 
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{../../results/radial_profile_reconstruction_metric/flick_flat_detection.pdf}
 \caption{Flick flat detection on the FN~101 magnification standard. BV density (bottom) shows a clear spike at the Flick flat angular position, whereas $R_a$ computed in a sliding window (top) shows no detectable response at the reconstruction resolution. The sliding-window width was matched to the certified angular extent of the Flick flat as specified in the DAkkS-DKD certificate (Art.~532~528); identical window parameters were used for both descriptors.}
@@ -263,6 +269,7 @@ The steel roundness polar representation (FN~101, Flick flat) is provided in the
 
 The Flick flat produces a clear response in BV density while showing no detectable response in a sliding-window $R_a$ analysis at the reconstruction resolution (Fig.~\ref{fig:flick_flat_detection}), illustrating the potential complementary sensitivity of gradient-based descriptors to localised geometric features.
 
+\FloatBarrier
 \section{Discussion}
 
 \subsection{Confirmed Results}
@@ -290,7 +297,8 @@ It is emphasised that neither the $L^p$ norms nor the Sobolev and BV seminorms a
 
 \textbf{Variation-based descriptors.} A controlled sensitivity analysis (Supplementary Table~S2) examined five synthetic defect types injected into the FN~111 residual profile. Amplitude-averaging descriptors ($R_a$, $R_q$, $R_z$) showed no detectable change at the reconstruction resolution — a single $100$~nm spike changed $R_a$ by less than $0.05\%$, below the per-frame phase-extraction precision — while BV density increased by $+18\%$ and the $W^{1,2}$ gradient seminorm by $+622\%$ for the same spike (Fig.~\ref{fig:descriptor_sensitivity}). ISO shape parameters responded to asymmetry ($R_{sk}$ changed by $-1104\%$ for a step) but not to symmetric localised features. $R_{sk}$ and BV density appear complementary in the tested scenarios: $R_{sk}$ responds to asymmetry, BV density responds to localised gradients.
 
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.95\textwidth]{../../results/radial_profile_reconstruction_metric/descriptor_sensitivity.pdf}
 \caption{Sensitivity of ISO and gradient-based descriptors to five synthetic defect types injected into the FN~111 residual profile. Percentage change from the unperturbed baseline; bold labels indicate changes exceeding 10\%.}
