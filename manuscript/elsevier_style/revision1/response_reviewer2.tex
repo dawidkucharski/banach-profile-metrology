@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+\newenvironment{reviewercomment}%
+{\par\medskip\noindent\begin{quotation}\itshape\color{black!70}}%
+{\end{quotation}\medskip}
+\newcommand{\response}{\par\noindent\textbf{Response:}\ }
+\newcommand{\changes}{\par\noindent\textbf{Changes made:}\ }
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Response to Reviewer \#2}\\[0.4em]
+{\large Ms.\ Ref.\ No.: MEAS-D-26-10707}\\[0.3em]
+Gradient-Sensitive Functional Descriptors for Interferometric Surface Metrology:\\
+Complementing Amplitude-Averaging ISO Parameters\\[0.3em]
+\textit{Measurement} --- Revised version, September 2026
+\end{center}
+
+\bigskip
+
+I thank Reviewer~\#2 for the encouraging assessment --- an industrially relevant topic, a potentially useful approach, and a technically sound study --- and for the clear list of points on the state of the art, the research gap, measurement speed, the standards basis, and the $R_z=RONt$ observation. Each is addressed below. Reviewer comments are reproduced in italics; my responses give the change and its location in the revised manuscript. A marked (redline) version of the manuscript accompanies this letter.
+
+\subsection*{Point 2.1 --- State of the art: references merely listed, not discussed individually}
+\begin{reviewercomment}
+The literature review requires substantial improvement. At present, many references are merely listed, often several at a time, without adequately explaining their individual contributions. Each cited work should be discussed separately, highlighting its key findings and relevance to the present study.
+\end{reviewercomment}
+\response The Introduction paragraphs that previously cited references in blocks have been rewritten so that every cited work receives its own clause or sentence stating who did what and its relevance.
+\changes (a)~The optical-methods paragraph now discusses individually: Brodmann's production scattered-light instrument (1983) and its extension to roughness--form--waviness measurement (1986); Fan \& Huynh's scattering analysis of periodic rough surfaces; Hertzsch et al.'s model-based scatterometry of turned surfaces; Kucharski \& Zdunek's low-cost nanometric scatterometry; Beno\^{i}t's early interference length comparisons; De Groot's systematisation of interference microscopy; and Chatterjee's phase-evaluation testing. (b)~The comparison-literature paragraph now discusses individually: Dumas et al.\ (subaperture stitching); Chen et al.\ (iterative stitching algorithm; large-surface stitching --- two separate works); Iacchetta et al.\ (chirp-z registration of band-limited images); Burge et al.\ (computer-generated holograms for x-ray/EUV optics); Quan et al.\ and Zhang et al.\ (repeatability evaluation, both amplitude-based); Pappas et al.\ (metrological-characteristics uncertainty propagation); Gertheiss et al.\ and Happ et al.\ (functional data analysis); Wolf, Sanner et al., and Zhao et al.\ (scale-dependence of surface characterisation). (c)~A new paragraph adds four further individually discussed works on fringe analysis (Takeda 1982, Kemao 2007, Feng et al.\ 2019, Galaktionov \& Toporovsky 2026).
+
+\subsection*{Point 2.2 --- Definition of the research gap}
+\begin{reviewercomment}
+The statement ``The research gap is therefore specific'' sounds like a self-fulfilling prophecy since the text does not sufficiently define the actual scientific challenge addressed by the study. The authors should explicitly describe the unresolved problem and explain why existing approaches are insufficient. [\ldots] It should be made clear which specific limitation, application challenge, performance bottleneck, or methodological gap is being addressed.
+\end{reviewercomment}
+\response The sentence has been deleted and the paragraph rewritten to define the unresolved problem explicitly. The revised paragraph states the concrete limitation: a localised geometric feature (flat, pit, scratch) on an otherwise smooth artefact is diluted by amplitude-averaging parameters over the entire evaluation length and can remain numerically invisible although metrologically relevant. It then explains why existing approaches are insufficient for profile data: areal parameters require calibrated height maps that single-image radial extraction cannot supply; polar-plot inspection is operator-dependent and not quantitative; and template-based detectors require the defect geometry to be known in advance. The scientific question is then stated: whether gradient-sensitive functional norms provide reproducible, quantifiable sensitivity to such features when computed from the same reconstructed residual as the standard ISO parameters, and how large that advantage is under controlled conditions.
+\changes Introduction, penultimate paragraph, fully rewritten.
+
+\subsection*{Point 2.3 --- Measurement speed (6 fps)}
+\begin{reviewercomment}
+The reported scanning speed of 6 fps appears relatively low. The authors should explain why the measurements were performed at this speed and discuss the limiting factors. [\ldots] The manuscript should clarify whether higher frame rates are technically feasible and how they would affect measurement performance.
+\end{reviewercomment}
+\response A dedicated paragraph has been added after Table~1. The angular step is $\Delta\alpha=\omega/\mathrm{fps}$, so angular resolution is governed jointly by rotation speed and frame rate, whereas total measurement time is governed by rotation speed alone. The rotation speeds (0.50 and 0.08$^\circ$/s) were deliberately conservative, to minimise dynamic excitation of the stage and keep the fringe pattern quasi-static within each exposure. At those speeds, 6 and 4~fps already give 12 and 50 frames per degree --- an oversampling factor of roughly 300 and 1200 relative to the declared 15-UPR metrological bandwidth --- so the frame rate was not the accuracy-limiting factor, and raising it at fixed rotation speed would only add redundant frames. Shorter acquisition would require faster rotation with a proportionally higher frame rate, which the cameras support up to 120~fps; whether fringe contrast and stage stability are preserved at substantially higher speeds has not been tested and is now future work.
+\changes New paragraph in Sec.~2.2 (after Table~1); new Future Work item on the speed--accuracy trade-off.
+
+\subsection*{Point 2.4 --- ISO 4287 superseded by ISO 21920}
+\begin{reviewercomment}
+The manuscript cites ISO 4287 for profile-based roughness evaluation. However, ISO 4287 has largely been superseded by the more recent ISO 21920 series [\ldots]. The authors should preferably update the manuscript to reference the relevant ISO 21920 standards.
+\end{reviewercomment}
+\response The standards basis has been migrated to ISO~21920-2:2021 throughout (Abstract, Methods, Discussion, Metrological Implications). ISO~4287 is retained as a clearly labelled predecessor reference, because the tactile comparison data and the previous study that this work extends predate the transition; the Methods note that the amplitude-parameter definitions used here are common to both documents.
+\changes New bibliography entry ISO~21920-2:2021; Sec.~3.4 opening sentence rewritten; ISO-framework references in Sec.~5.3, 5.5 and the Abstract updated. A related clarification has been added: the peak-to-valley quantity reported as $R_z$ is, in ISO~21920-2 terms, the total height ($Rt$) of the evaluation profile; the symbol $R_z$ is retained for continuity with the previous study (see Point~2.6).
+
+\subsection*{Point 2.5 --- Table formatting: parentheses around value and uncertainty}
+\begin{reviewercomment}
+The formatting of the values in Table 2 should be revised. Parentheses are currently missing around the reported values and uncertainties. For consistency and readability, the values should be presented in the form: e.g., (66.3 $\pm$ 4.7) nm.
+\end{reviewercomment}
+\response Done. All dimensioned entries in the descriptor table (Table~2 of the original submission; now Table~3, since a new uncertainty-budget table precedes it) use the $(x \pm u)$~unit form, e.g.\ $(66.3 \pm 4.7)$~nm. The dimensionless shape parameters ($R_{sk}$, $R_{ku}$, $L^4/L^1$) are left without parentheses, since no unit follows the uncertainty.
+\changes Descriptor table reformatted.
+
+\subsection*{Point 2.6 --- Identical values for $R_z$ and $RONt$}
+\begin{reviewercomment}
+The manuscript reports identical numerical results for Rz and RONt. This observation requires further explanation. The authors should clarify whether this is expected due to the specific evaluation procedure, measurement conditions, or data characteristics, or whether it is coincidental.
+\end{reviewercomment}
+\response The equality is expected by construction, and the revision explains this rigorously in a dedicated subsection. In this pipeline all descriptors are deliberately evaluated on the same LSCI-centred, Gaussian-filtered closed residual profile (this shared evaluation profile is the design premise of the like-for-like comparison). As implemented, $R_z$ is the global peak-to-valley height of that profile (the total height $Rt$ in ISO~21920-2 terms), and $RONt$ is the peak-to-valley roundness deviation of the very same profile, so the two coincide exactly; the same argument gives $R_q=RONq$. The two families would separate if profile texture were evaluated on a different bandwidth than form (e.g.\ after $\lambda c$-based roughness/waviness separation) or on an independent linear trace. Both are reported because they belong to different ISO frameworks with different reference conventions, and because their exact equality verifies the shared evaluation profile. The previous, less precise ``single-lobe'' explanation has been removed.
+\changes New Sec.~4.3 ``Coincidence of $R_z$ with $RONt$ and $R_q$ with $RONq$''; implementation note added below the $R_z$ definition in Sec.~3.4.
+
+\bigskip
+I hope these changes address the reviewer's points fully.
+
+\bigskip
+Yours sincerely,\\[0.6em]
+Dawid Kucharski\\
+Institute of Mechanical Technology, Poznan University of Technology\\
+\href{mailto:dawid.kucharski@put.poznan.pl}{dawid.kucharski@put.poznan.pl}
+
+\end{document}
