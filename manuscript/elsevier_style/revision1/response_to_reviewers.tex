@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+\newcounter{revpoint}
+\newenvironment{reviewercomment}%
+{\par\medskip\noindent\begin{quotation}\itshape\color{black!70}}%
+{\end{quotation}\medskip}
+\newcommand{\response}{\par\noindent\textbf{Response:}\ }
+\newcommand{\changes}{\par\noindent\textbf{Changes made:}\ }
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Response to Reviewers}\\[0.4em]
+{\large Ms.\ Ref.\ No.: MEAS-D-26-10707}\\[0.3em]
+Gradient-Sensitive Functional Descriptors for Interferometric Surface Metrology:\\
+Complementing Amplitude-Averaging ISO Parameters\\[0.3em]
+\textit{Measurement} --- Revised version, September 2026
+\end{center}
+
+\bigskip
+
+Dear Editor, dear Reviewers,
+
+We thank the reviewers for their careful reading of the manuscript and for their constructive comments, which have led to substantial improvements. Below we respond to every point individually. Reviewer comments are reproduced in italics; our responses describe the changes and give the location of each revision in the revised manuscript. A marked version of the manuscript (latexdiff redline, \texttt{banach-elsevier-marked.pdf}) accompanies this letter and highlights all changes.
+
+In summary, the revision (i) removes conceptual overclaiming around the definitional $R_a=L^1$/$R_q=L^2$ equalities, (ii) rewrites the state of the art so that every cited work is discussed individually and adds the four references indicated by Reviewer~1, (iii) replaces the previous research-gap statement with an explicit definition of the unresolved problem, (iv) explains the acquisition-speed choices and their trade-offs, (v) migrates the standards basis from ISO~4287 to ISO~21920-2, (vi) reformats the descriptor table (Table~2 of the original submission; Table~3 in the revision) to the $(x \pm u)$~unit convention, (vii) explains the $R_z = RONt$ coincidence rigorously, (viii) adds an indicative GUM-style type-B uncertainty budget (new Sec.~3.8, new Table~2), (ix) adds a quantitative translation rule from synthetic defects to realistic inspection scenarios, (x) adds a standardised angular-unit convention for the sampling-dependent descriptors (new Sec.~3.6), and (xi) substantially extends the Limitations and Future Work sections regarding between-run reproducibility, blind defect detection, and generalisability. Because the new budget table precedes the results in document order, the original Table~2 is Table~3 in the revised manuscript; we refer to both numbers below where relevant.
+
+\bigskip
+\hrule
+\section*{Reviewer \#1}
+
+\subsection*{Point 1.1 --- Conceptual overclaiming of the $R_a = L^1$, $R_q = L^2$ equivalences}
+\begin{reviewercomment}
+There is some conceptual overclaiming. The numerical equivalence Ra = L\textsuperscript{1} and Rq = L\textsuperscript{2} is presented as an ``identity'' (which it is, by definition), but the framing suggests more novelty than is justified. Labelling a standard arithmetic mean of absolute deviations as an L\textsuperscript{1} norm provides no new metrological information. The functional-analytic terminology, while mathematically precise, sometimes obscures rather than illuminates.
+\end{reviewercomment}
+\response We agree, and we have removed all framing that could suggest novelty in these definitional equalities. The manuscript already contained the statement that the equalities ``are not empirical findings; they are definitional consequences'' and that relabelling $R_a$ as $L^1$ ``provides no new metrological information'' (Sec.~5.3, \emph{Mathematical equivalences}); the revision extends this stance to every other location where the equalities are mentioned.
+\changes (a)~In Sec.~4.4 (Classical--Functional-Descriptor Comparison), the sentence beginning ``The numerical identity\ldots confirms\ldots'' has been rewritten to state that the equalities ``are definitional --- each pair is the same formula applied to the same centred residual --- and are reported purely as a computational cross-check that both descriptor families are evaluated on identical data, not as an empirical finding.'' (b)~The closing paragraph of the Introduction now states explicitly: ``No claim of novelty is attached to the norms themselves --- they are standard tools of functional analysis, and the functional-analytic vocabulary is used only as an organising taxonomy; the controlled comparison framework is the contribution.''
+
+\subsection*{Point 1.2 --- Missing base references on surface metrology and fringe analysis}
+\begin{reviewercomment}
+The introduction does not cover the base and actual researches on surface metrology, e.g., \url{https://doi.org/10.1364/JOSA.72.000156}, \url{https://doi.org/10.1016/J.OPTLASENG.2005.10.012}, \url{https://doi.org/10.3390/asi9020031}, \url{http://dx.doi.org/10.1117/1.AP.1.2.025001}.
+\end{reviewercomment}
+\response All four references have been added and are discussed individually in a new Introduction paragraph on the methodological lineage of fringe-pattern analysis, which also positions our radial excess-fraction method within the single-frame, non-phase-shifting family.
+\changes A new paragraph has been added to the Introduction (after the instrument-review paragraph): Takeda et al.\ (Fourier-transform method of fringe-pattern analysis, J.~Opt.~Soc.~Am.\ 72:156, 1982); Kemao (two-dimensional windowed Fourier transform for fringe analysis, Opt.\ Lasers Eng.\ 45:304, 2007); Feng et al.\ (fringe pattern analysis using deep learning, Adv.\ Photonics 1:025001, 2019); and Galaktionov \& Toporovsky (multi-stage fringe-map reconstruction for non-phase-shifting interferometry, Appl.\ Syst.\ Innov.\ 9:31, 2026). Each work's contribution is summarised in its own sentence, and the paragraph closes by relating the present method to this lineage.
+
+\subsection*{Point 1.3 --- Redundancy of BV density and the $W^{1,2}$ seminorm ($r = 0.94$)}
+\begin{reviewercomment}
+The correlation between BV density and W\textsuperscript{1,2} seminorm (r=0.94) suggests these descriptors may be providing essentially the same information, yet they are presented as complementary. The paper could more clearly distinguish which descriptors offer truly independent information. The statistical power is limited (n=5 sweeps), and the reported 95\% expanded uncertainties should be treated as lower bounds.
+\end{reviewercomment}
+\response We agree and have restructured the discussion to state explicitly which descriptors carry independent information. As repeatability metrics across sweeps, BV density and the $W^{1,2}$ seminorm are largely redundant ($r=0.94$), and the revised text now says that routine reporting of both is not warranted. They are, however, not interchangeable in their response to isolated features: for the same 100~nm spike, $W^{1,2}$ responded with $+622\%$ versus $+18\%$ for BV density, because quadratic gradient weighting amplifies a single steep event far more strongly than the linear total-variation measure.
+\changes Sec.~5.3 (\emph{Practical considerations}) now contains an explicit map of the descriptor space: (i)~$R_a$/$R_q$ carry amplitude information; (ii)~$R_{sk}$ carries an independent asymmetry axis; (iii)~BV density carries the localised-gradient axis and is recommended as the primary gradient descriptor; (iv)~$W^{1,2}$ adds value mainly as a high-sensitivity alarm for isolated steep features rather than as an independent axis; (v)~$L^4/L^1$ provides a supplementary distribution-shape axis. Regarding the lower-bound status of the uncertainties: this was already stated in Sec.~3.7 and the Limitations; it is now also stated in the Abstract (``All reported uncertainties are within-run repeatability estimates from five sweeps of a single continuous rotation and should be interpreted as lower bounds'').
+
+\subsection*{Point 1.4 --- Uncertain practical value; the Flick flat is a known, certified feature}
+\begin{reviewercomment}
+The practical value remains uncertain. While BV density detects the Flick flat, it is unclear whether this provides actionable information beyond what an operator might see in a polar plot inspection. The paper does not demonstrate an application where gradient-based descriptors reveal a defect that would otherwise be missed in quality control --- the Flick flat is certified, so its presence is already known.
+\end{reviewercomment}
+\response This is a fair characterisation, and the revision states it openly. The Flick flat analysis is an existence proof under ground-truth conditions, not a blind detection study. The practical argument we now make is narrower: the gradient-sensitive layer converts what an operator might notice in a visual polar-plot inspection into a quantitative, thresholdable, automatable indicator computed from data already acquired for ISO reporting --- with no operator in the loop, a defined angular position estimate, and a repeatability statement. We explicitly acknowledge that a demonstration in which gradient descriptors reveal a defect that routine quality control would otherwise miss is still outstanding.
+\changes A new paragraph \emph{Practical value and the known-feature caveat} has been added to Sec.~5.3, and Future Work item~(iii) now specifies a blind-detection protocol (analyst unaware of defect presence and position, artefacts with independently characterised defects of calibrated dimensions) as the decisive next test of practical value. The corresponding Limitations entry (fifth point) now names blind-detection performance as uncharacterised.
+
+\bigskip
+\hrule
+\section*{Reviewer \#2}
+
+\subsection*{Point 2.1 --- State of the art: references merely listed, not discussed individually}
+\begin{reviewercomment}
+The literature review requires substantial improvement. At present, many references are merely listed, often several at a time, without adequately explaining their individual contributions. Each cited work should be discussed separately, highlighting its key findings and relevance to the present study.
+\end{reviewercomment}
+\response The two paragraphs of the Introduction that previously cited references in blocks have been rewritten so that every cited work receives its own clause or sentence stating who did what and its relevance.
+\changes (a)~The optical-methods paragraph now discusses individually: Brodmann's production scattered-light instrument (1983) and its extension to roughness--form--waviness measurement (1986); Fan \& Huynh's scattering analysis of periodic rough surfaces; Hertzsch et al.'s model-based scatterometry of turned surfaces; Kucharski \& Zdunek's low-cost nanometric scatterometry setup; Beno\^{i}t's early interference length comparisons; De Groot's systematisation of interference microscopy; and Chatterjee's phase-evaluation testing. (b)~The comparison-literature paragraph now discusses individually: Dumas et al.\ (subaperture stitching), Chen et al.\ (iterative stitching algorithm; large-surface stitching --- two separate works), Iacchetta et al.\ (chirp-z registration of band-limited interferometric images), Burge et al.\ (computer-generated holograms for x-ray/EUV optics), Quan et al.\ (comparative repeatability evaluation), Zhang et al.\ (repeatability across interference systems), Pappas et al.\ (metrological-characteristics uncertainty propagation), Gertheiss et al.\ (functional data analysis review), Happ et al.\ (amplitude/phase variation framework), Wolf (topography and topology), Sanner et al.\ (scale-dependent roughness parameters), and Zhao et al.\ (fractal topography simulation). (c)~The new fringe-analysis paragraph (see Response 1.2) adds four further individually discussed works.
+
+\subsection*{Point 2.2 --- Definition of the research gap}
+\begin{reviewercomment}
+The statement ``The research gap is therefore specific'' sounds like a self-fulfilling prophecy since the text does not sufficiently define the actual scientific challenge addressed by the study. The authors should explicitly describe the unresolved problem and explain why existing approaches are insufficient. [\ldots] It should be made clear which specific limitation, application challenge, performance bottleneck, or methodological gap is being addressed.
+\end{reviewercomment}
+\response The sentence has been deleted and the paragraph rewritten to define the unresolved problem explicitly. The revised paragraph states the concrete limitation being addressed: a localised geometric feature (flat, pit, scratch) on an otherwise smooth artefact is diluted by amplitude-averaging parameters over the entire evaluation length and can remain numerically invisible although metrologically relevant. It then explains why existing approaches are insufficient for profile data: areal parameters require calibrated height maps that single-image radial extraction cannot supply; polar-plot inspection is operator-dependent and not quantitative; and template-based defect detectors require the defect geometry to be known in advance. The scientific question is then stated: whether gradient-sensitive functional norms provide reproducible, quantifiable sensitivity to such features when computed from the same reconstructed residual as the standard ISO parameters, and how large that advantage is under controlled conditions.
+\changes Introduction, penultimate paragraph, fully rewritten (marked version, p.~4--5).
+
+\subsection*{Point 2.3 --- Measurement speed (6 fps)}
+\begin{reviewercomment}
+The reported scanning speed of 6 fps appears relatively low. The authors should explain why the measurements were performed at this speed and discuss the limiting factors. [\ldots] The manuscript should clarify whether higher frame rates are technically feasible and how they would affect measurement performance.
+\end{reviewercomment}
+\response A dedicated paragraph has been added after Table~1. In brief: the angular step is $\Delta\alpha = \omega/\mathrm{fps}$, so angular resolution is governed jointly by rotation speed and frame rate, whereas total measurement time is governed by rotation speed alone. The rotation speeds (0.50 and 0.08$^\circ$/s) were deliberately conservative to minimise dynamic excitation of the stage and keep the fringe pattern quasi-static within each exposure. At those speeds, 6 and 4~fps already give 12 and 50 frames per degree --- an oversampling factor of roughly 300 and 1200 relative to the declared 15-UPR metrological bandwidth --- so the frame rate was not the accuracy-limiting factor, and raising it at fixed rotation speed would only add redundant frames. Shorter acquisition would require faster rotation with proportionally higher frame rate, which the cameras support up to 120~fps; whether fringe contrast and stage stability are preserved at substantially higher speeds has not been tested and is now listed as future work (speed--accuracy trade-off study, Future Work item~vi).
+\changes New paragraph in Sec.~2.2 (after Table~1); new Future Work item~(vi).
+
+\subsection*{Point 2.4 --- ISO 4287 superseded by ISO 21920}
+\begin{reviewercomment}
+The manuscript cites ISO 4287 for profile-based roughness evaluation. However, ISO 4287 has largely been superseded by the more recent ISO 21920 series [\ldots]. The authors should preferably update the manuscript to reference the relevant ISO 21920 standards.
+\end{reviewercomment}
+\response The standards basis has been migrated to ISO~21920-2:2021 throughout the manuscript (Abstract, Methods, Discussion, Metrological Implications). ISO~4287 is retained as a clearly labelled secondary/predecessor reference, because the tactile comparison data and the previous study that this work extends predate the transition. The Methods now also note that the amplitude-parameter definitions used here are common to both documents.
+\changes New bibliography entry ISO~21920-2:2021; Sec.~3.4 opening sentence rewritten; ISO-framework references in Sec.~5.3, 5.5 and the Abstract updated. In addition, a clarification connected to this migration has been added: the peak-to-valley quantity reported as $R_z$ is, in ISO~21920-2 terms, the total height ($Rt$) of the evaluation profile; the symbol $R_z$ is retained for continuity with the previous study (see also Response~2.6).
+
+\subsection*{Point 2.5 --- Table 2 formatting: parentheses around value and uncertainty}
+\begin{reviewercomment}
+The formatting of the values in Table 2 should be revised. Parentheses are currently missing around the reported values and uncertainties. For consistency and readability, the values should be presented in the form: e.g., (66.3 $\pm$ 4.7) nm.
+\end{reviewercomment}
+\response Done. All dimensioned entries in the descriptor table (Table~2 of the original submission; Table~3 in the revision) now use the $(x \pm u)$~unit form, e.g.\ $(66.3 \pm 4.7)$~nm. The dimensionless shape parameters ($R_{sk}$, $R_{ku}$, $L^4/L^1$) are left without parentheses since no unit follows the uncertainty.
+\changes Table~3 (formerly Table~2) reformatted.
+
+\subsection*{Point 2.6 --- Identical values for $R_z$ and $RONt$}
+\begin{reviewercomment}
+The manuscript reports identical numerical results for Rz and RONt. This observation requires further explanation. The authors should clarify whether this is expected due to the specific evaluation procedure, measurement conditions, or data characteristics, or whether it is coincidental.
+\end{reviewercomment}
+\response The equality is expected by construction, and the revision explains this rigorously in a dedicated subsection. In this pipeline all descriptors are deliberately evaluated on the same LSCI-centred, Gaussian-filtered closed residual profile (this shared evaluation profile is the design premise of the like-for-like comparison). $R_z$, as implemented, is the global peak-to-valley height of that profile, and $RONt$ is the peak-to-valley roundness deviation of the very same profile, so the two coincide exactly; the same argument explains $R_q = RONq$. The two families would separate if profile texture were evaluated on a different bandwidth than form (e.g., after $\lambda c$-based roughness/waviness separation in the ISO~21920 sense) or on an independent linear trace. Both are reported because they belong to different ISO frameworks with different reference conventions, and because their exact equality verifies the shared evaluation profile. The previous, less precise explanation (residual dominated by a single lobe) has been removed.
+\changes New Sec.~4.3 ``Coincidence of $R_z$ with $RONt$ and $R_q$ with $RONq$''; implementation note added below the $R_z$ definition in Sec.~3.4.
+
+\bigskip
+\hrule
+\section*{Reviewer \#4}
+
+\subsection*{Point 4.1 --- Expanded uncertainty analysis: between-run reproducibility and GUM-compliant budget}
+\begin{reviewercomment}
+Expand the uncertainty analysis significantly throughout the manuscript. The current version relies solely on within run repeatability derived from five continuous sweeps [\ldots]. To address this major weakness you must provide a comprehensive between run reproducibility assessment. You are specifically required to include new experimental data involving completely independent measurement setups distinct thermal cycles and physical recentering of the measurement object. Furthermore the manuscript currently lacks a full GUM compliant uncertainty budget [\ldots]. These additions must include an assessment of laser wavelength stability refractive index variations Abbe error camera nonlinearity and form removal uncertainty.
+\end{reviewercomment}
+\response We have substantially expanded the uncertainty analysis within what the existing data permit, and we are transparent about what it cannot yet establish. (1)~A new subsection (Sec.~3.8, ``Indicative Type-B Uncertainty Budget'', with new Table~2) quantifies exactly the five contributions the reviewer names: laser wavelength stability ($\pm1$~nm module tolerance, rectangular: 0.11\% relative, 0.3~nm on the FN~111 $RONt$; a pure scale factor that cannot create or mask localised features); refractive-index variations of air ($<10^{-5}$ relative at the observed $\pm0.2^{\circ}$C stability: negligible); Abbe error/axis wobble ($\pm12~\mu$rad specification analysed through both the cosine-error and beam-walk mechanisms: sub-0.01~nm after LSCI first-harmonic removal); camera nonlinearity/EFM localisation (bounded empirically by the $\pm0.05$-fringe per-frame uncertainty, reduced by band-limited averaging to $\approx$1.1~nm); and form-removal uncertainty (lima\c{c}on second-order term $a^2/2R$, evaluated at 7--41~nm for centring eccentricities of 15--35~$\mu$m, carried as a bounded systematic term because it is common to all sweeps --- and consistent in magnitude with the 34~nm optical--tactile $RONt$ difference that the $E_n=0.61$ comparison shows to be within combined uncertainties). The combined random budget confirms the type-A term dominates, and identifies the form-removal systematic and untested between-run effects as the leading unquantified risks. (2)~Regarding new between-run experiments with independent setups, thermal cycles, and physical re-centring: we agree these are required before the descriptors can be recommended for adoption, but they cannot be performed within this revision cycle; the interferometer is currently not in the measurement configuration used for the archives. Rather than present hastily acquired data, the revision states this limitation explicitly and in the reviewer's own terms: the Abstract, Sec.~3.7, the Limitations, and Future Work item~(i) all now state that within-run values are lower bounds and that a between-run study (independent setups, distinct thermal cycles, physical re-centring) is the prerequisite for a complete GUM-compliant evaluation. We believe the paper's claims, which are scoped throughout as proof-of-concept and within-run only, are commensurate with the evidence presented.
+\changes New Sec.~3.8 and new Table~2; Sec.~3.7 renamed ``Uncertainty Evaluation'' with a pointer to the type-B budget and the GUM reference (JCGM~100); Abstract, Limitations (first point) and Future Work item~(i) updated.
+
+\subsection*{Point 4.2 --- Synthetic defect methodology and translation to real-world conditions}
+\begin{reviewercomment}
+Improve and broaden the synthetic defect injection methodology to reflect real world conditions. [\ldots] If physical testing is absolutely impossible you need to substantially expand the discussion section. You must explain exactly how your synthetic sensitivity results can be reliably translated to practical industrial inspection scenarios such as the rigorous quality control of bearing surfaces complex optical components or precision mechanical seals.
+\end{reviewercomment}
+\response Physical defect artefacts with calibrated dimensions are not available to us within the revision period, so we have followed the reviewer's alternative instruction and substantially expanded the Discussion with a quantitative translation framework. The new paragraph \emph{Translation of synthetic responses to realistic defects} (Sec.~5.3) derives a scaling rule: a localised defect adds a total-variation increment $\Delta TV$ that depends only on the defect geometry ($\Delta TV \approx 2A$ for a spike of amplitude $A$), so the relative full-profile BV-density response is $\Delta TV/TV_{\mathrm{background}}$. This reproduces the observed $+18\%$ on the FN~111 ($TV = 1.137~\mu$m) and predicts only $+0.17\%$ for the identical spike on the FN~101 ($TV = 118.4~\mu$m) --- a direct quantification of the reviewer's 500-fold defect-to-background observation. Two practical consequences are drawn: full-profile BV density is best suited to smooth finished surfaces (bearing raceways, optical components, precision seals) whose residual amplitudes are comparable to the FN~111 case, with the synthetic archetypes mapped to realistic feature classes (spike~$\leftrightarrow$~pit/inclusion edge, scratch~$\leftrightarrow$~tooling or handling mark, sinusoid~$\leftrightarrow$~chatter); and for rough backgrounds the sliding-window formulation restores local contrast, which is exactly why the Flick flat is detected on the FN~101 despite the unfavourable full-profile ratio. The text states plainly that validation against physical defects of calibrated dimensions remains necessary before these scaling arguments can be considered established.
+\changes New paragraph in Sec.~5.3; Limitations third point rewritten to reference the scaling analysis; Future Work item~(iii) upgraded to calibrated physical defects and a blind-detection protocol.
+
+\subsection*{Point 4.3 --- Sampling-interval dependence and angular-unit conventions}
+\begin{reviewercomment}
+Address the complex sampling interval dependence of the newly proposed functional descriptors. [\ldots] they require a rigorous and mathematically sound conversion to angular units such as nanometers per degree for any meaningful cross instrument comparison. [\ldots] You must provide a clear standardized procedure [\ldots]. The development and proposal of agreed angular unit conventions is absolutely critical at this stage.
+\end{reviewercomment}
+\response A standardised procedure is now defined in a dedicated new subsection (Sec.~3.6, ``Angular-Unit Convention for Sampling-Dependent Descriptors''). The convention has three steps: (1)~\emph{band-limit first} --- apply a declared phase-correct Gaussian profile filter (ISO~16610-21) at a stated cutoff in UPR, after which the profile derivative is bounded and the discrete sums converge to the continuous integrals as $\Delta\alpha \to 0$, so the descriptor characterises the declared bandwidth rather than the sampling grid; (2)~\emph{sample adequately} --- at least ten samples per cutoff undulation (the present data carry $\approx$290 and $\approx$1200); (3)~\emph{report in angular units together with the filter cutoff} --- BV density as $TV/\Theta$ in nm\,deg$^{-1}$ and gradient content as the RMS angular gradient in nm\,deg$^{-1}$. The converted values for both artefacts are given (FN~111: 3.2 and 3.7~nm\,deg$^{-1}$; FN~101: 329 and 438~nm\,deg$^{-1}$ at the 15-UPR cutoff), and the text notes that because the conversion is a fixed multiplicative factor for a given acquisition, relative uncertainties and relative defect responses are identical in either unit system. The parallel with declaring the filter for $RONt$ is drawn explicitly to indicate the route to reference-software adoption. Cross-instrument empirical verification of the convention is listed as Future Work item~(v).
+\changes New Sec.~3.6; Sec.~3.5 closing paragraph updated to point to it; \emph{Practical considerations} (Sec.~5.3), Limitations (fourth point), Metrological Implications and Future Work updated to reference the convention.
+
+\subsection*{Point 4.4 --- Validation scope and generalizability}
+\begin{reviewercomment}
+Broaden the validation scope and definitively demonstrate the generalizability of your findings. The current experimental validation is far too narrow [\ldots] strictly limited to merely two specific artifacts from a single commercial manufacturer JENOPTIK. [\ldots] You need to rigorously validate your proposed methodology on a significantly wider range of artifact types [\ldots]. Finally conducting detailed inter laboratory comparisons using a common artifact set would provide the vital long term reproducibility data [\ldots].
+\end{reviewercomment}
+\response We agree that generalisability is not yet demonstrated, and the revised manuscript now says so without qualification rather than implying otherwise. New certified artefacts of different diameters and materials (optical glass, tungsten carbide) and an inter-laboratory campaign are beyond what can be added in this revision cycle; they require procurement and partner laboratories. The revision therefore (a)~scopes every conclusion explicitly as a proof-of-concept on two artefacts, (b)~notes the breadth that the existing data do provide --- the two artefacts differ substantially in material (Al$_2$O$_3$ ceramic versus steel) and by two orders of magnitude in residual amplitude, though they share similar diameter and manufacturer --- and (c)~converts the reviewer's requirements into a concrete validation programme in Future Work: artefacts of different diameters, materials and finishes (item~ii); calibrated physical defects and blind detection (item~iii); an inter-laboratory comparison with a common artefact set and standardised pipeline as the source of long-term reproducibility data for potential standardisation (item~iv); and cross-instrument verification of the angular-unit convention (item~v). We believe the revised claims are now strictly commensurate with the validation scope.
+\changes Limitations second point rewritten; Future Work items~(ii)--(v) expanded; proof-of-concept scoping verified throughout (Abstract, Sec.~5.3, Sec.~5.5).
+
+\bigskip
+\hrule
+\section*{List of principal changes}
+\begin{enumerate}
+\item Abstract: ISO~21920-2 reference; explicit lower-bound scoping of all uncertainties.
+\item Introduction: two state-of-the-art paragraphs rewritten with per-work discussion; new fringe-analysis paragraph adding Takeda et al.\ (1982), Kemao (2007), Feng et al.\ (2019), Galaktionov \& Toporovsky (2026); research-gap paragraph replaced by an explicit problem statement; closing paragraph disclaims novelty of the norms themselves.
+\item Sec.~2.2: new paragraph explaining frame-rate/rotation-speed choices, limiting factors, and the speed--accuracy trade-off.
+\item Sec.~3.4: ISO~21920-2 as primary standard; implementation note that the reported $R_z$ is the total height ($Rt$).
+\item New Sec.~3.6: standardised angular-unit convention for sampling-dependent descriptors, with converted values for both artefacts.
+\item Sec.~3.7 (renamed ``Uncertainty Evaluation'') and new Sec.~3.8: indicative GUM-style type-B budget (new Table~2) covering laser wavelength stability, refractive index, Abbe error/wobble, camera nonlinearity/EFM localisation, and form removal.
+\item Descriptor table (now Table~3): all dimensioned values reformatted as $(x \pm u)$~unit.
+\item New Sec.~4.3: rigorous by-construction explanation of $R_z = RONt$ and $R_q = RONq$.
+\item Sec.~4.4: definitional equalities reframed as a computational cross-check.
+\item Sec.~5.3: new paragraphs on translation of synthetic defect responses to realistic inspection scenarios (with quantitative scaling rule) and on practical value including the known-feature caveat; descriptor-independence map (amplitude/asymmetry/gradient axes); BV--$W^{1,2}$ redundancy stated explicitly.
+\item Limitations: all five points strengthened (type-B budget pointer, form-removal systematic, material/diameter breadth, scaling analysis, blind detection).
+\item Future Work: six-item validation programme (between-run reproducibility and GUM completion; wider artefacts; calibrated physical defects and blind detection; inter-laboratory comparison; angular-unit verification; speed--accuracy trade-off).
+\item Bibliography: five new entries (four reviewer-indicated references and ISO~21920-2:2021).
+\end{enumerate}
+
+We hope the revised manuscript now meets the expectations of the reviewers and the journal.
+
+\bigskip
+Yours sincerely,
+
+Dawid Kucharski\\
+Institute of Mechanical Technology, Poznan University of Technology\\
+\href{mailto:dawid.kucharski@put.poznan.pl}{dawid.kucharski@put.poznan.pl}
+
+\end{document}
