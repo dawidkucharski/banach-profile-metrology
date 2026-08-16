@@ -7,7 +7,10 @@ template.*
 
 # Raw interferogram archives — deposit on Zenodo separately
 ceramic/
+05deg_per_s_6fps_24000frames#1/
+05deg_per_s_6fps_24000frames#2/
 05deg_per_s_6fps_24000frames#3/
+064deg_per_s_8fps_25000frames#2/
 steel/
 Kula_ver2/
 
