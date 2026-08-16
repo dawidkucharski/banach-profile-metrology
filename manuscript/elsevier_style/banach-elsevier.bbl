@@ -1,0 +1,244 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Zhu2019}
+L.~Zhu, C.~Ni, Z.~Yang, C.~Liu, \href{https://doi.org/10.1016/j.precisioneng.2019.04.010 https://linkinghub.elsevier.com/retrieve/pii/S0141635918307384}{{Investigations of micro-textured surface generation mechanism and tribological properties in ultrasonic vibration-assisted milling of Ti–6Al–4V}}, Precision Engineering 57~(November 2018) (2019) 229--243.
+\newblock \href {http://dx.doi.org/10.1016/j.precisioneng.2019.04.010} {\path{doi:10.1016/j.precisioneng.2019.04.010}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.precisioneng.2019.04.010 https://linkinghub.elsevier.com/retrieve/pii/S0141635918307384}
+
+\bibitem{Leach2011}
+R.~Leach, \href{http://link.springer.com/10.1007/978-3-642-12012-1}{{Optical Measurement of Surface Topography}}, Springer Berlin Heidelberg, Berlin, Heidelberg, 2011.
+\newblock \href {http://dx.doi.org/10.1007/978-3-642-12012-1} {\path{doi:10.1007/978-3-642-12012-1}}.
+\newline\urlprefix\url{http://link.springer.com/10.1007/978-3-642-12012-1}
+
+\bibitem{Whitehouse2011}
+D.~J. Whitehouse, {Handbook of Surface and Nanometrology}, 2nd Edition, CRC Press, Boca Raton, 2010.
+\newblock \href {http://dx.doi.org/10.1201/b10415} {\path{doi:10.1201/b10415}}.
+
+\bibitem{MICHELSON1893}
+A.~Michelson, \href{https://doi.org/10.1038/049056a0 http://10.0.4.14/049056a0 http://www.nature.com/articles/049056a0}{{Light-Waves and their Application to Metrology}}, Nature 49~(1255) (1893) 56--60.
+\newblock \href {http://dx.doi.org/10.1038/049056a0} {\path{doi:10.1038/049056a0}}.
+\newline\urlprefix\url{https://doi.org/10.1038/049056a0 http://10.0.4.14/049056a0 http://www.nature.com/articles/049056a0}
+
+\bibitem{Jenkins1976}
+F.~A. Jenkins, H.~E. White, \href{https://archive.org/details/fundamentalsofop00jenk}{{Fundamentals of Optics}}, International student edition, McGraw-Hill, 1976, (accessed 16 August 2026).
+\newline\urlprefix\url{https://archive.org/details/fundamentalsofop00jenk}
+
+\bibitem{Born2000}
+M.~Born, E.~Wolf, E.~Hecht, \href{http://physicstoday.scitation.org/doi/10.1063/1.1325200}{{Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light}}, Physics Today 53~(10) (2000) 77--78.
+\newblock \href {http://dx.doi.org/10.1063/1.1325200} {\path{doi:10.1063/1.1325200}}.
+\newline\urlprefix\url{http://physicstoday.scitation.org/doi/10.1063/1.1325200}
+
+\bibitem{Brodmann1984}
+R.~Brodmann, {An Optical Instrument for Measuring the Surface Roughness in Production Control}, CIRP Annals 33~(1) (1984) 403--406.
+\newblock \href {http://dx.doi.org/10.1016/S0007-8506(07)61451-6} {\path{doi:10.1016/S0007-8506(07)61451-6}}.
+
+\bibitem{Brodmann1986}
+R.~Brodmann, {Roughness form and waviness measurement by means of light-scattering}, Precision Engineering 8~(4) (1986) 221--226.
+\newblock \href {http://dx.doi.org/10.1016/0141-6359(86)90063-2} {\path{doi:10.1016/0141-6359(86)90063-2}}.
+
+\bibitem{Fan1994}
+Y.~Y. Fan, V.~M. Huynh, {An investigation of light scattering from flat periodic rough surfaces for surface roughness estimation}, Precision Engineering 16~(3) (1994) 205--211.
+\newblock \href {http://dx.doi.org/10.1016/0141-6359(94)90126-0} {\path{doi:10.1016/0141-6359(94)90126-0}}.
+
+\bibitem{Hertzsch2002}
+A.~Hertzsch, K.~Kr{\"{o}}ger, H.~Truckenbrodt, {Microtopographic analysis of turned surfaces by model-based scatterometry}, Precision Engineering 26~(3) (2002) 306--313.
+\newblock \href {http://dx.doi.org/10.1016/S0141-6359(02)00116-2} {\path{doi:10.1016/S0141-6359(02)00116-2}}.
+
+\bibitem{Kucharski_D._A_2020}
+D.~Kucharski, H.~Zdunek, \href{http://journals.pan.pl/Content/116520/PDF/10_485-490_01475_Bpast.No.68-3_30.06.20_K3A_TeX.pdf}{{A low-cost, simple optical setup for a fast scatterometry surface roughness measurements with nanometric precision}}, Bulletin of the Polish Academy of Sciences: Technical Sciences 68~(48) (2020) 485--490.
+\newblock \href {http://dx.doi.org/10.24425/bpasts.2020.133364} {\path{doi:10.24425/bpasts.2020.133364}}.
+\newline\urlprefix\url{http://journals.pan.pl/Content/116520/PDF/10_485-490_01475_Bpast.No.68-3_30.06.20_K3A_TeX.pdf}
+
+\bibitem{Benoit1898}
+R.~Beno{\^{i}}t, \href{http://www.edpsciences.org/10.1051/jphystap:01898007005700%0Apapers3://publication/doi/10.1051/jphystap:01898007005700 http://www.edpsciences.org/10.1051/jphystap:01898007005700}{{Application des ph{\'{e}}nom{\`{e}}nes d'interf{\'{e}}rence {\`{a}} des d{\'{e}}terminations m{\'{e}}trologiques}}, Journal de Physique Th{\'{e}}orique et Appliqu{\'{e}}e 7~(1) (1898) 57--68.
+\newblock \href {http://dx.doi.org/10.1051/jphystap:01898007005700} {\path{doi:10.1051/jphystap:01898007005700}}.
+\newline\urlprefix\url{http://www.edpsciences.org/10.1051/jphystap:01898007005700%0Apapers3://publication/doi/10.1051/jphystap:01898007005700 http://www.edpsciences.org/10.1051/jphystap:01898007005700}
+
+\bibitem{Xue-fei2015}
+G.~Xue-fei, X.~Sheng-nian, Y.~Ye-fei, B.~Shan, B.~Xing, C.~Zhou-jian, C.~Ge-rui, D.~Peng, G.~Tian-shu, G.~Wei, H.~Shuang-lin, L.~Yu-long, L.~Ying, L.~Zi-ren, S.~Ming-xue, S.~Bao-san, T.~Wen-lin, Y.~Pin, X.~Peng, Z.~Yun-long, Z.~Hai-peng, L.~Yun-kau, \href{http://www.sciencedirect.com/science/article/pii/S0275106215000843 https://linkinghub.elsevier.com/retrieve/pii/S0275106215000843}{{Laser Interferometric Gravitational Wave Detection in Space and Structure Formation in the Early Universe}}, Chinese Astronomy and Astrophysics 39~(4) (2015) 411--446.
+\newblock \href {http://dx.doi.org/10.1016/j.chinastron.2015.10.001} {\path{doi:10.1016/j.chinastron.2015.10.001}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0275106215000843 https://linkinghub.elsevier.com/retrieve/pii/S0275106215000843}
+
+\bibitem{DeGroot2011a}
+P.~de~Groot, \href{http://link.springer.com/10.1007/978-3-642-12012-1_8}{{Phase Shifting Interferometry}}, in: R.~K. Leach (Ed.), Optical Measurement of Surface Topography, Springer Berlin Heidelberg, Berlin, Heidelberg, 2011, pp. 167--186.
+\newblock \href {http://dx.doi.org/10.1007/978-3-642-12012-1_8} {\path{doi:10.1007/978-3-642-12012-1_8}}.
+\newline\urlprefix\url{http://link.springer.com/10.1007/978-3-642-12012-1_8}
+
+\bibitem{deGroot2014}
+P.~de~Groot, {Principles of interference microscopy for the measurement of surface topography}, Advances in Optics and Photonics 7 (2015) 1--65.
+\newblock \href {http://dx.doi.org/10.1364/AOP.7.000001} {\path{doi:10.1364/AOP.7.000001}}.
+
+\bibitem{Chatterjee:2015phase}
+S.~Chatterjee, \href{http://link.springer.com/10.1007/978-81-322-2000-8_10}{{Phase-Shifting Laser Interferometry for Measurement of Surface Form Error}}, in: P.K.Gupta, R.Khare (Eds.), Springer Proceedings in Physics, Vol. 160 of Springer Proceedings in Physics, 2015, pp. 209--222.
+\newblock \href {http://dx.doi.org/10.1007/978-81-322-2000-8_10} {\path{doi:10.1007/978-81-322-2000-8_10}}.
+\newline\urlprefix\url{http://link.springer.com/10.1007/978-81-322-2000-8_10}
+
+\bibitem{Polack2019}
+F.~Polack, M.~Thomasset, S.~Brochet, D.~Dennetiere, {Surface shape determination with a stitching Michelson interferometer and accuracy evaluation}, Review of Scientific Instruments 90~(2).
+\newblock \href {http://dx.doi.org/10.1063/1.5061930} {\path{doi:10.1063/1.5061930}}.
+
+\bibitem{Thomasset2013}
+M.~Thomasset, M.~Idir, F.~Polack, M.~Bray, J.~J. Servant, {A new phase-shift microscope designed for high accuracy stitching interferometry}, Nuclear Instruments and Methods in Physics Research, Section A: Accelerators, Spectrometers, Detectors and Associated Equipment 710 (2013) 7--12.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2012.10.123} {\path{doi:10.1016/j.nima.2012.10.123}}.
+
+\bibitem{Fan2014}
+K.-C. Fan, N.~Wang, Z.-W. Wang, H.~Zhang, \href{http://stacks.iop.org/0957-0233/25/i=6/a=064009?key=crossref.73300f1601df9e917d2e7830f09f45e7}{{Development of a roundness measuring system for microspheres}}, Measurement Science and Technology 25~(6) (2014) 064009.
+\newblock \href {http://dx.doi.org/10.1088/0957-0233/25/6/064009} {\path{doi:10.1088/0957-0233/25/6/064009}}.
+\newline\urlprefix\url{http://stacks.iop.org/0957-0233/25/i=6/a=064009?key=crossref.73300f1601df9e917d2e7830f09f45e7}
+
+\bibitem{Kuhnel2012}
+M.~K{\"{u}}hnel, V.~Ullmann, U.~Gerhardt, E.~Manske, \href{http://stacks.iop.org/0957-0233/23/i=7/a=074016?key=crossref.8429e4ab7d2d23702c0a05dba94b50d5 http://stacks.iop.org/0957-0233/23/i=7/a=074016}{{Automated setup for non-tactile high-precision measurements of roundness and cylindricity using two laser interferometers}}, Measurement Science and Technology 23~(7) (2012) 74016.
+\newblock \href {http://dx.doi.org/10.1088/0957-0233/23/7/074016} {\path{doi:10.1088/0957-0233/23/7/074016}}.
+\newline\urlprefix\url{http://stacks.iop.org/0957-0233/23/i=7/a=074016?key=crossref.8429e4ab7d2d23702c0a05dba94b50d5 http://stacks.iop.org/0957-0233/23/i=7/a=074016}
+
+\bibitem{Takeda1982}
+M.~Takeda, H.~Ina, S.~Kobayashi, {Fourier-transform method of fringe-pattern analysis for computer-based topography and interferometry}, Journal of the Optical Society of America 72~(1) (1982) 156--160.
+\newblock \href {http://dx.doi.org/10.1364/JOSA.72.000156} {\path{doi:10.1364/JOSA.72.000156}}.
+
+\bibitem{Kemao2007}
+Q.~Kemao, {Two-dimensional windowed Fourier transform for fringe pattern analysis: Principles, applications and implementations}, Optics and Lasers in Engineering 45~(2) (2007) 304--317.
+\newblock \href {http://dx.doi.org/10.1016/j.optlaseng.2005.10.012} {\path{doi:10.1016/j.optlaseng.2005.10.012}}.
+
+\bibitem{Feng2019dl}
+S.~Feng, Q.~Chen, G.~Gu, T.~Tao, L.~Zhang, Y.~Hu, W.~Yin, C.~Zuo, {Fringe pattern analysis using deep learning}, Advanced Photonics 1~(2) (2019) 025001.
+\newblock \href {http://dx.doi.org/10.1117/1.AP.1.2.025001} {\path{doi:10.1117/1.AP.1.2.025001}}.
+
+\bibitem{Galaktionov2026}
+I.~Galaktionov, V.~Toporovsky, {A Multi-Stage Algorithm of Fringe Map Reconstruction for Fiber-End Surface Analysis and Non-Phase-Shifting Interferometry}, Applied System Innovation 9~(2) (2026) 31.
+\newblock \href {http://dx.doi.org/10.3390/asi9020031} {\path{doi:10.3390/asi9020031}}.
+
+\bibitem{kucharski2025radial-0ca}
+D.~Kucharski, M.~Wieczorowski, {Radial image processing for phase extraction in rough-surface interferometry}, Measurement (2025) 117102\href {http://dx.doi.org/10.1016/j.measurement.2025.117102} {\path{doi:10.1016/j.measurement.2025.117102}}.
+
+\bibitem{Dumas2003134}
+P.~Dumas, J.~Fleig, G.~Forbes, P.~E. Murphy, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85016807739&doi=10.1117%2f12.2284035&partnerID=40&md5=8aa04fbb9453cddff6da95df376ffdb6}{Extending the range of interferometry though subaperture stitching}, Vol. 10314, 2003, p. 134 – 137, cited by: 9.
+\newblock \href {http://dx.doi.org/10.1117/12.2284035} {\path{doi:10.1117/12.2284035}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85016807739&doi=10.1117%2f12.2284035&partnerID=40&md5=8aa04fbb9453cddff6da95df376ffdb6}
+
+\bibitem{Chen20061219}
+S.~Chen, S.~Li, Y.~Dai, Z.~Zheng, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-33745276550&doi=10.1364%2fJOSAA.23.001219&partnerID=40&md5=4d72b8095c89e81b1ba058a414b7b0c2}{Iterative algorithm for subaperture stitching test with spherical interferometers}, Journal of the Optical Society of America A: Optics and Image Science, and Vision 23~(5) (2006) 1219 – 1226, cited by: 48.
+\newblock \href {http://dx.doi.org/10.1364/JOSAA.23.001219} {\path{doi:10.1364/JOSAA.23.001219}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-33745276550&doi=10.1364%2fJOSAA.23.001219&partnerID=40&md5=4d72b8095c89e81b1ba058a414b7b0c2}
+
+\bibitem{Chen20073504}
+S.~Chen, S.~Li, Y.~Dai, Z.~Zheng, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-34547536867&doi=10.1364%2fAO.46.003504&partnerID=40&md5=9e100905a834eebb31d582fc8884de99}{Testing of large optical surfaces with subaperture stitching}, Applied Optics 46~(17) (2007) 3504 – 3509, cited by: 44.
+\newblock \href {http://dx.doi.org/10.1364/AO.46.003504} {\path{doi:10.1364/AO.46.003504}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-34547536867&doi=10.1364%2fAO.46.003504&partnerID=40&md5=9e100905a834eebb31d582fc8884de99}
+
+\bibitem{Iacchetta2016}
+A.~S. Iacchetta, J.~R. Fienup, D.~T. Leisawitz, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85006847872&doi=10.1117%2f12.2232178&partnerID=40&md5=25831551d0ae177fef89c421998e31d4}{Rotation and translation registration of bandlimited interferometric images using a chirp z-transform}, Vol. 9907, 2016, cited by: 3.
+\newblock \href {http://dx.doi.org/10.1117/12.2232178} {\path{doi:10.1117/12.2232178}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85006847872&doi=10.1117%2f12.2232178&partnerID=40&md5=25831551d0ae177fef89c421998e31d4}
+
+\bibitem{Burge2025}
+J.~Burge, S.~Ament, J.~Beverage, C.~Muccianti, C.~Zhao, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024341829&doi=10.1117%2f12.3067011&partnerID=40&md5=92bd5b2fbfd00333a45113efd7a5be87}{Applications of computer-generated holograms for measuring x-ray and euv optics}, Vol. 13620, 2025, cited by: 0.
+\newblock \href {http://dx.doi.org/10.1117/12.3067011} {\path{doi:10.1117/12.3067011}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024341829&doi=10.1117%2f12.3067011&partnerID=40&md5=92bd5b2fbfd00333a45113efd7a5be87}
+
+\bibitem{Quan2016}
+H.~Quan, H.~Xi, W.~Fan, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85002262299&doi=10.1117%2f12.2243301&partnerID=40&md5=98a061c8f8cdb6f89be75a953cd88b3f}{Evaluating surface repeatability for interferometric measurement: A comparative study}, Vol. 9684, 2016, cited by: 1.
+\newblock \href {http://dx.doi.org/10.1117/12.2243301} {\path{doi:10.1117/12.2243301}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85002262299&doi=10.1117%2f12.2243301&partnerID=40&md5=98a061c8f8cdb6f89be75a953cd88b3f}
+
+\bibitem{Zhang2018}
+L.~Zhang, B.~Zhang, S.~Han, S.~Tang, C.~Zhuang, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85059070480&doi=10.1117%2f12.2505406&partnerID=40&md5=d2fe726c4d532c3f34340ac03143d343}{Repeatability study on different interference systems}, Vol. 10847, 2018, cited by: 0.
+\newblock \href {http://dx.doi.org/10.1117/12.2505406} {\path{doi:10.1117/12.2505406}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85059070480&doi=10.1117%2f12.2505406&partnerID=40&md5=d2fe726c4d532c3f34340ac03143d343}
+
+\bibitem{Pappas2023419}
+A.~Pappas, L.~Newton, A.~Thompson, H.~Hooshmand, R.~Leach, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85165481981&partnerID=40&md5=3c2a4bd283d7a91350fa5adce5f6941b}{Uncertainty propagation of field areal surface texture parameters using the metrological characteristics approach}, 2023, p. 419 – 422, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85165481981&partnerID=40&md5=3c2a4bd283d7a91350fa5adce5f6941b}
+
+\bibitem{Gertheiss2024}
+J.~Gertheiss, D.~Rügamer, B.~X.~W. Liew, S.~Greven, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85205152017&doi=10.1002%2fbimj.202300363&partnerID=40&md5=8d9e42e9cd2f23350c0bf0b477169043}{Functional data analysis: An introduction and recent developments}, Biometrical Journal 66~(7), cited by: 32; All Open Access, Hybrid Gold Open Access.
+\newblock \href {http://dx.doi.org/10.1002/bimj.202300363} {\path{doi:10.1002/bimj.202300363}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85205152017&doi=10.1002%2fbimj.202300363&partnerID=40&md5=8d9e42e9cd2f23350c0bf0b477169043}
+
+\bibitem{Happ2019}
+C.~Happ, F.~Scheipl, A.-A. Gabriel, S.~Greven, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85064480543&doi=10.1002%2fsta4.220&partnerID=40&md5=e8d4b76faff42103fe5637961836125d}{A general framework for multivariate functional principal component analysis of amplitude and phase variation}, Stat 8~(1), cited by: 12; All Open Access, Green Open Access.
+\newblock \href {http://dx.doi.org/10.1002/sta4.220} {\path{doi:10.1002/sta4.220}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85064480543&doi=10.1002%2fsta4.220&partnerID=40&md5=e8d4b76faff42103fe5637961836125d}
+
+\bibitem{Wolf2020}
+G.~W. Wolf, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084666906&doi=10.1088%2f2051-672X%2fab70e8&partnerID=40&md5=006779646e49c4fc727d508bc63eabfa}{Surfaces - topography and topology}, Surface Topography: Metrology and Properties 8~(1), cited by: 14; All Open Access, Hybrid Gold Open Access.
+\newblock \href {http://dx.doi.org/10.1088/2051-672X/ab70e8} {\path{doi:10.1088/2051-672X/ab70e8}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084666906&doi=10.1088%2f2051-672X%2fab70e8&partnerID=40&md5=006779646e49c4fc727d508bc63eabfa}
+
+\bibitem{Sanner2022}
+A.~Sanner, W.~G. Nöhring, L.~A. Thimons, T.~D. Jacobs, L.~Pastewka, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85119021594&doi=10.1016%2fj.apsadv.2021.100190&partnerID=40&md5=7ad03ad2f796c56f6bec60b5febac199}{Scale-dependent roughness parameters for topography analysis}, Applied Surface Science Advances 7, cited by: 28; All Open Access, Gold Open Access, Green Open Access.
+\newblock \href {http://dx.doi.org/10.1016/j.apsadv.2021.100190} {\path{doi:10.1016/j.apsadv.2021.100190}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85119021594&doi=10.1016%2fj.apsadv.2021.100190&partnerID=40&md5=7ad03ad2f796c56f6bec60b5febac199}
+
+\bibitem{Zhao2021}
+J.~Zhao, Z.~Wang, L.~Zhengminqing, R.~Zhu, \href{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85122423109&doi=10.1088%2f2051-672X%2fac3f26&partnerID=40&md5=7eb253c5518d5356ead64c22878553ba}{Fractal simulation of surface topography and prediction of its lubrication characteristics}, Surface Topography: Metrology and Properties 9~(4), cited by: 17.
+\newblock \href {http://dx.doi.org/10.1088/2051-672X/ac3f26} {\path{doi:10.1088/2051-672X/ac3f26}}.
+\newline\urlprefix\url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85122423109&doi=10.1088%2f2051-672X%2fac3f26&partnerID=40&md5=7eb253c5518d5356ead64c22878553ba}
+
+\bibitem{Meijer2018a}
+F.~Meijer, D.~Kucharski, E.~Stachowska, \href{https://www.spiedigitallibrary.org/journals/optical-engineering/volume-57/issue-10/104101/Determination-of-the-phase-in-the-center-of-a-circular/10.1117/1.OE.57.10.104101.full}{{Determination of the phase in the center of a circular two-beam interference pattern to determine the displacement of a rough surface}}, Optical Engineering 57~(10) (2018) 1.
+\newblock \href {http://dx.doi.org/10.1117/1.OE.57.10.104101} {\path{doi:10.1117/1.OE.57.10.104101}}.
+\newline\urlprefix\url{https://www.spiedigitallibrary.org/journals/optical-engineering/volume-57/issue-10/104101/Determination-of-the-phase-in-the-center-of-a-circular/10.1117/1.OE.57.10.104101.full}
+
+\bibitem{JENOPTIK_ball}
+{JENOPTIK Industrial Metrology}, \href{https://www.jenoptik.cz/files/products-en/roundness-measurement/roundness-measurement_10064360_12_2016_en.pdf}{{Unequivocal measurement of form and positional tolerances using innovative measuring systems}}, JENOPTIK Industrial Metrology Germany GmbH, 2018, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.jenoptik.cz/files/products-en/roundness-measurement/roundness-measurement_10064360_12_2016_en.pdf}
+
+\bibitem{thorlabs_CPS532}
+{Thorlabs Inc.}, \href{https://www.thorlabs.com/thorproduct.cfm?partnumber=CPS532}{{CPS532 Collimated Laser Diode Module, 532 nm, 4.5 mW, Round Beam, {\O}11 mm Housing}}, (accessed 16 August 2026) (2019).
+\newline\urlprefix\url{https://www.thorlabs.com/thorproduct.cfm?partnumber=CPS532}
+
+\bibitem{FLIR_sdk}
+{FLIR Systems}, \href{https://www.teledynevisionsolutions.com/support/support-center/software-firmware-downloads/}{{Software Development Kit}}, (accessed 16 August 2026) (2019).
+\newline\urlprefix\url{https://www.teledynevisionsolutions.com/support/support-center/software-firmware-downloads/}
+
+\bibitem{newport_esp_manual}
+{Newport Corporation}, \href{https://www.newport.com/medias/sys_master/images/images/h7e/hfe/9044140982302/ESP301-Controller-GUI-Manual.pdf}{{ESP301 Controller GUI Manual}}, Newport Corporation, 2017, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.newport.com/medias/sys_master/images/images/h7e/hfe/9044140982302/ESP301-Controller-GUI-Manual.pdf}
+
+\bibitem{Ihaka1996}
+R.~Ihaka, R.~Gentleman, \href{http://www.tandfonline.com/doi/abs/10.1080/10618600.1996.10474713}{{R: A Language for Data Analysis and Graphics}}, Journal of Computational and Graphical Statistics 5~(3) (1996) 299--314.
+\newblock \href {http://dx.doi.org/10.1080/10618600.1996.10474713} {\path{doi:10.1080/10618600.1996.10474713}}.
+\newline\urlprefix\url{http://www.tandfonline.com/doi/abs/10.1080/10618600.1996.10474713}
+
+\bibitem{ISO12181-1}
+{ISO 12181-1:2011}, \href{https://www.iso.org/standard/53620.html}{{Geometrical product specifications (GPS) — Roundness — Part 1: Vocabulary and parameters of roundness}}, Tech. rep., International Organization for Standardization, (accessed 16 August 2026) (2011).
+\newline\urlprefix\url{https://www.iso.org/standard/53620.html}
+
+\bibitem{ISO4291}
+{ISO 4291:1985}, \href{https://www.iso.org/standard/10135.html}{{Methods for the assessment of departure from roundness — Measurement of variations in radius}}, Tech. rep., International Organization for Standardization, withdrawn, replaced by ISO~12181-1:2011. (accessed 16 August 2026) (1985).
+\newline\urlprefix\url{https://www.iso.org/standard/10135.html}
+
+\bibitem{ISO16610-21}
+{ISO 16610-21:2025}, \href{https://www.iso.org/standard/84786.html}{{Geometrical product specifications (GPS) — Filtration — Part 21: Linear profile filters: Gaussian filters}}, Tech. rep., International Organization for Standardization, (accessed 16 August 2026) (2025).
+\newline\urlprefix\url{https://www.iso.org/standard/84786.html}
+
+\bibitem{ISO21920-2}
+{ISO 21920-2:2021}, \href{https://www.iso.org/standard/72226.html}{{Geometrical product specifications (GPS) --- Surface texture: Profile --- Part 2: Terms, definitions and surface texture parameters}}, Tech. rep., International Organization for Standardization, Geneva, (accessed 16 August 2026) (2021).
+\newline\urlprefix\url{https://www.iso.org/standard/72226.html}
+
+\bibitem{ISO4287}
+{ISO 4287:1997}, \href{https://www.iso.org/standard/10132.html}{{Geometrical Product Specifications (GPS) — Surface texture: Profile method — Terms, definitions and surface texture parameters}}, Tech. rep., International Organization for Standardization, (accessed 16 August 2026) (1997).
+\newline\urlprefix\url{https://www.iso.org/standard/10132.html}
+
+\bibitem{ISO25178}
+{ISO 25178-2:2021}, \href{https://www.iso.org/standard/74591.html}{{Geometrical Product Specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters}}, Tech. rep., International Organization for Standardization, (accessed 16 August 2026) (2021).
+\newline\urlprefix\url{https://www.iso.org/standard/74591.html}
+
+\bibitem{Banach1932}
+S.~Banach, \href{https://archive.org/details/in.ernet.dli.2015.493033}{{Th\'{e}orie des op\'{e}rations lin\'{e}aires}}, Monografje Matematyczne, Warsaw, 1932, (accessed 16 August 2026).
+\newline\urlprefix\url{https://archive.org/details/in.ernet.dli.2015.493033}
+
+\bibitem{JCGM100}
+{JCGM 100:2008}, \href{https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf}{{Evaluation of measurement data — Guide to the expression of uncertainty in measurement (GUM)}}, Tech. rep., Joint Committee for Guides in Metrology, (accessed 16 August 2026) (2008).
+\newline\urlprefix\url{https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf}
+
+\bibitem{NewportCorporation:2018vk}
+{Newport Corporation}, \href{https://www.newport.com/p/URS100BCC}{{Precision Motion Control Catalog}}, Newport Corporation, 2018, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.newport.com/p/URS100BCC}
+
+\end{thebibliography}
