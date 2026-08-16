@@ -1,7 +1,7 @@
 \documentclass[review]{elsarticle}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL revision1/banach-elsevier-submitted.tex   Sat Aug 15 08:08:10 2026
-%DIF ADD banach-elsevier.tex                       Sun Aug 16 11:19:44 2026
+%DIF ADD banach-elsevier.tex                       Sun Aug 16 11:49:15 2026
 
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
@@ -288,11 +288,15 @@ z_i=\nu_i\frac{\lambda}{2}, \qquad \lambda=532~\mathrm{nm}.
 
 \subsection{Topography Profile, Reference Removal and Eccentricity Reduction}
 \label{sec:topography}
-After phase-to-height conversion, the roundness profile is extracted following ISO~12181-1~\cite{ISO12181-1} (which supersedes the withdrawn ISO~4291). For each $360^\circ$ segment, a least-squares reference circle (LSCI) is fitted to the angular height profile $z_i = h(\theta_i)$ in Cartesian coordinates:
+After phase-to-height conversion, the roundness profile is extracted following ISO~12181-1~\cite{ISO12181-1} (which supersedes the withdrawn ISO~4291\DIFaddbegin \DIFadd{~\mbox{%DIFAUXCMD
+\cite{ISO4291}}\hskip0pt%DIFAUXCMD
+}\DIFaddend ). For each $360^\circ$ segment, a least-squares reference circle (LSCI) is fitted to the angular height profile $z_i = h(\theta_i)$ in Cartesian coordinates:
 \begin{equation}
 (x_i, y_i) = \big((R_0 + z_i)\cos\theta_i,\; (R_0 + z_i)\sin\theta_i\big),
 \end{equation}
-where $R_0 = 14.9794$~mm is the nominal radius of the JENOPTIK FN~111. The LSCI centre $(x_c, y_c)$ minimises $\sum_i [\sqrt{(x_i-x_c)^2+(y_i-y_c)^2} - R_0]^2$, yielding the centred radial residuals $\rho_i$. The LSCI fit is numerically equivalent to removing the first harmonic of the angular profile, but it provides the formal ISO~4291 reference circle required for roundness metrology. After LSCI centring, a phase-correct Gaussian low-pass profile filter with 50\% transmission at 15 undulations per revolution (UPR) is applied to the residual profile, consistent with the filter specification used for the tactile reference measurements and with the Gaussian profile filter defined in ISO~16610-21. All classical and gradient-based descriptors are computed from this LSCI-centred, Gaussian-filtered residual $\rho_i^{(\mathrm{filt})}$.
+where $R_0 = 14.9794$~mm is the nominal radius of the JENOPTIK FN~111. The LSCI centre $(x_c, y_c)$ minimises $\sum_i [\sqrt{(x_i-x_c)^2+(y_i-y_c)^2} - R_0]^2$, yielding the centred radial residuals $\rho_i$. The LSCI fit is numerically equivalent to removing the first harmonic of the angular profile, but it provides the formal ISO~4291 reference circle required for roundness metrology. After LSCI centring, a phase-correct Gaussian low-pass profile filter with 50\% transmission at 15 undulations per revolution (UPR) is applied to the residual profile, consistent with the filter specification used for the tactile reference measurements and with the Gaussian profile filter defined in ISO~16610-21\DIFaddbegin \DIFadd{:2025~\mbox{%DIFAUXCMD
+\cite{ISO16610-21}}\hskip0pt%DIFAUXCMD
+}\DIFaddend . All classical and gradient-based descriptors are computed from this LSCI-centred, Gaussian-filtered residual $\rho_i^{(\mathrm{filt})}$.
 
 For the JENOPTIK magnification standard FN~101, the same processing chain is applied: a linear trend is removed from the unwrapped phase sequence before height conversion (Sec.~\ref{sec:discussion_drift}), the LSCI reference circle is fitted to the angular profile, and the Gaussian low-pass filter (50\% at 15~UPR) is applied. Although both artefacts are processed through identical filtering steps, the 15~UPR cutoff corresponds to different spatial wavelengths on the circumference: $2\pi \times 14.9794~\mathrm{mm}/15 = 6.27$~mm for the FN~111 ($\varnothing=29.9588$~mm) and $2\pi \times 15~\mathrm{mm}/15 = 6.28$~mm for the FN~101 ($\varnothing \approx 30$~mm) — effectively identical. The angular sampling differs substantially ($0.083^\circ$ vs.\ $0.020^\circ$, Table~\ref{tab:meas_param}), but the Gaussian filter sigma is set by the UPR cutoff, not by the sampling interval, so the filtered profiles are directly comparable.
 
@@ -324,7 +328,7 @@ For the eccentricity-corrected ceramic angular profile $q_C(\theta)$,
 RONt=\max_{\theta}q_C(\theta)-\min_{\theta}q_C(\theta), \qquad
 RONq=\left[\frac{1}{2\pi}\int_0^{2\pi}q_C^2(\theta)\,d\theta\right]^{1/2}.
 \end{equation}
-These are profile/form quantities in nanometres. B-spline pre-smoothing (20 degrees of freedom, $\approx 18^\circ$ period) stabilises the LSCI fit; the subsequent Gaussian low-pass filter (50\% at 15~UPR, ISO~16610-21) defines the metrological bandwidth. All descriptors are computed from the same Gaussian-filtered residual.
+These are profile/form quantities in nanometres. B-spline pre-smoothing (20 degrees of freedom, $\approx 18^\circ$ period) stabilises the LSCI fit; the subsequent Gaussian low-pass filter (50\% at 15~UPR, ISO~16610-21\DIFaddbegin \DIFadd{:2025}\DIFaddend ) defines the metrological bandwidth. All descriptors are computed from the same Gaussian-filtered residual.
 
 \subsection{Functional Gradient-Based Descriptors}
 The concept of a complete normed vector space originates from the foundational work of Banach~\cite{Banach1932}. For discrete profile data of finite length $N$, the vector space $\mathbb{R}^N$ equipped with any norm is a Banach space; the present work does not invoke infinite-dimensional completeness but draws on the taxonomy of $L^p$, Sobolev, and bounded-variation norms that Banach's framework systematised. For a centred residual profile $p(s)$ and $1\leq p<\infty$,
@@ -353,7 +357,7 @@ The curvature RMS (root-mean-square of the discrete second derivative; reported 
 }
 
 \begin{enumerate}
-\item \textbf{\DIFadd{Band-limit first.}} \DIFadd{The profile is filtered with a declared phase-correct Gaussian profile filter (ISO~16610-21) at a stated cutoff in undulations per revolution (here 50\% transmission at 15~UPR). After band-limiting, the profile derivative is bounded and the discrete sums converge to the continuous integrals as $\Delta\alpha\to 0$; the descriptor then characterises the declared bandwidth rather than the sampling grid.
+\item \textbf{\DIFadd{Band-limit first.}} \DIFadd{The profile is filtered with a declared phase-correct Gaussian profile filter (ISO~16610-21:2025) at a stated cutoff in undulations per revolution (here 50\% transmission at 15~UPR). After band-limiting, the profile derivative is bounded and the discrete sums converge to the continuous integrals as $\Delta\alpha\to 0$; the descriptor then characterises the declared bandwidth rather than the sampling grid.
 }\item \textbf{\DIFadd{Sample adequately.}} \DIFadd{The angular sampling must resolve the declared bandwidth with margin; at least ten samples per cutoff undulation are recommended. Here the FN~111 and FN~101 profiles carry $\approx$290 and $\approx$1200 samples per 15-UPR undulation, so discretisation error is negligible.
 }\item \textbf{\DIFadd{Report in angular units.}} \DIFadd{The BV density is reported as total variation per unit angle, $\mathrm{BV}_\theta = TV(p)/\Theta$ in nm\,deg$^{-1}$ ($\Theta=360^\circ$), and the gradient content as the RMS angular gradient $g_{\mathrm{rms}} = [\frac{1}{N-1}\sum_j ((p_{j+1}-p_j)/\Delta\alpha)^2]^{1/2}$ in nm\,deg$^{-1}$, together with the filter cutoff. For comparison across artefacts or instruments of }\emph{\DIFadd{different diameter}}\DIFadd{, the angular unit is additionally converted to an arc-length unit by dividing by the arc length per degree, $\pi D/360$; the BV density is then $\mathrm{BV}_s = TV(p)/(\pi D)$ in nm\,mm$^{-1}$. The arc-length form is the diameter-independent unit and is the one recommended for cross-instrument reporting, since nm\,deg$^{-1}$ still scales with the circumference of the specific artefact.
 }\end{enumerate}
@@ -465,7 +469,7 @@ with experimentally characterised input distributions, and a between-run reprodu
 }
 
 \DIFaddend \subsection{Computational Implementation}
-The reconstruction workflow (\path{scripts/reconstruct_radial_profile_sequence.py}) decodes $\epsilon_i$ from each interferogram, unwraps the sequence, converts to nanometres, applies LSCI fitting and Gaussian low-pass filtering (50\% at 15~UPR, ISO~16610-21), and exports CSV/JSON metrics with sweep-repeatability uncertainty. Vector PDF figures document each processing stage. The pipeline is invoked as \path{PYTHONPATH=src .venv/bin/python scripts/reconstruct_radial_profile_sequence.py} with dataset-specific parameters (full command in the data repository). Per-image excess-fraction decoding and unwrapping require approximately 0.5~ms per frame (measured on an Intel Core i7-9700K, single-threaded Python~3.9), so the full 124,000-frame archive processes in under two minutes on consumer hardware.
+The reconstruction workflow (\path{scripts/reconstruct_radial_profile_sequence.py}) decodes $\epsilon_i$ from each interferogram, unwraps the sequence, converts to nanometres, applies LSCI fitting and Gaussian low-pass filtering (50\% at 15~UPR, ISO~16610-21\DIFaddbegin \DIFadd{:2025}\DIFaddend ), and exports CSV/JSON metrics with sweep-repeatability uncertainty. Vector PDF figures document each processing stage. The pipeline is invoked as \path{PYTHONPATH=src .venv/bin/python scripts/reconstruct_radial_profile_sequence.py} with dataset-specific parameters (full command in the data repository). Per-image excess-fraction decoding and unwrapping require approximately 0.5~ms per frame (measured on an Intel Core i7-9700K, single-threaded Python~3.9), so the full 124,000-frame archive processes in under two minutes on consumer hardware.
 
 \section{Results}
 
@@ -483,7 +487,7 @@ Table~\ref{tab:metric_phase_reconstruction} gives the numerical comparison after
 \centering
 \footnotesize
 \setlength{\tabcolsep}{4pt}
-\caption{Full-resolution radial EFM reconstruction from raw interferograms (LSCI + Gaussian low-pass, 50\% at 15~UPR, ISO~16610-21). Uncertainties are 95\% expanded within-run repeatability estimates from five sweeps ($n=5$, $t_{0.975,4}=2.776$). Units: nm for all descriptors except BV density and $W^{1,2}$ gradient (nm\,sample$^{-1}$). Certified $RONt$: FN~111 $244 \pm 52$~nm (Hommel Roundscan~535, $n=104$); FN~101 $41.94$~$\mu$m (form tester, $n=12$). The FN~101 certificate does not report an expanded uncertainty; therefore only the percentage difference is reported for this artefact rather than an $E_n$ score.}
+\caption{Full-resolution radial EFM reconstruction from raw interferograms (LSCI + Gaussian low-pass, 50\% at 15~UPR, ISO~16610-21\DIFaddbeginFL \DIFaddFL{:2025}\DIFaddendFL ). Uncertainties are 95\% expanded within-run repeatability estimates from five sweeps ($n=5$, $t_{0.975,4}=2.776$). Units: nm for all descriptors except BV density and $W^{1,2}$ gradient (nm\,sample$^{-1}$). Certified $RONt$: FN~111 $244 \pm 52$~nm (Hommel Roundscan~535, $n=104$); FN~101 $41.94$~$\mu$m (form tester, $n=12$). The FN~101 certificate does not report an expanded uncertainty; therefore only the percentage difference is reported for this artefact rather than an $E_n$ score.}
 \label{tab:metric_phase_reconstruction}
 \begin{tabular}{lcc}
 \toprule
