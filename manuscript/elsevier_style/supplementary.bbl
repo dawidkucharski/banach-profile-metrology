@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{NewportCorporation:2018vk}
+{Newport Corporation}, \href{https://www.newport.com/p/URS100BCC}{{Precision Motion Control Catalog}}, Newport Corporation, 2018, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.newport.com/p/URS100BCC}
+
+\end{thebibliography}
