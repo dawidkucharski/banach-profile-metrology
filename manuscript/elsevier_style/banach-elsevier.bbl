@@ -29,13 +29,13 @@ F.~A. Jenkins, H.~E. White, \href{https://archive.org/details/fundamentalsofop00
 \newline\urlprefix\url{https://archive.org/details/fundamentalsofop00jenk}
 
 \bibitem{Born2000}
-M.~Born, E.~Wolf, E.~Hecht, \href{http://physicstoday.scitation.org/doi/10.1063/1.1325200}{{Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light}}, Physics Today 53~(10) (2000) 77--78.
-\newblock \href {http://dx.doi.org/10.1063/1.1325200} {\path{doi:10.1063/1.1325200}}.
-\newline\urlprefix\url{http://physicstoday.scitation.org/doi/10.1063/1.1325200}
+M.~Born, E.~Wolf, \href{https://www.sciencedirect.com/book/monograph/9780080264820/principles-of-optics}{Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light}, 6th Edition, Pergamon Press, Oxford, 1980, (accessed 16 August 2026).
+\newline\urlprefix\url{https://www.sciencedirect.com/book/monograph/9780080264820/principles-of-optics}
 
 \bibitem{Brodmann1984}
-R.~Brodmann, {An Optical Instrument for Measuring the Surface Roughness in Production Control}, CIRP Annals 33~(1) (1984) 403--406.
-\newblock \href {http://dx.doi.org/10.1016/S0007-8506(07)61451-6} {\path{doi:10.1016/S0007-8506(07)61451-6}}.
+R.~Brodmann, T.~Gast, G.~Thurn, A.~Wirtz, O.~W.~G. Rodenstock, \href{https://www.sciencedirect.com/science/article/pii/S0007850607614516}{An optical instrument for measuring the surface roughness in production control}, CIRP Annals 33~(1) (1984) 403--406.
+\newblock \href {http://dx.doi.org/https://doi.org/10.1016/S0007-8506(07)61451-6} {\path{doi:https://doi.org/10.1016/S0007-8506(07)61451-6}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0007850607614516}
 
 \bibitem{Brodmann1986}
 R.~Brodmann, {Roughness form and waviness measurement by means of light-scattering}, Precision Engineering 8~(4) (1986) 221--226.
